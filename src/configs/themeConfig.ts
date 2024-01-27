@@ -49,9 +49,9 @@ type ThemeConfig = {
 
 const themeConfig: ThemeConfig = {
   // ** Layout Configs
-  templateName: 'Sneat' /* App Name */,
-  layout: 'vertical' /* vertical | horizontal */,
-  mode: 'light' as Mode /* light | dark | semi-dark /*! Note: semi-dark value will only work for Vertical Layout */,
+  templateName: '' /* App Name */,
+  layout: 'horizontal' /* vertical | horizontal */,
+  mode: 'dark' as Mode /* light | dark | semi-dark /*! Note: semi-dark value will only work for Vertical Layout */,
   direction: 'ltr' /* ltr | rtl */,
   skin: 'default' /* default | bordered */,
   contentWidth: 'boxed' /* full | boxed */,
@@ -75,11 +75,11 @@ const themeConfig: ThemeConfig = {
 
   // ** AppBar Configs
   appBar: 'fixed' /* fixed | static | hidden /*! Note: hidden value will only work for Vertical Layout */,
-  appBarBlur: true /* true | false */,
+  appBarBlur: false /* true | false */,
 
   // ** Other Configs
   responsiveFontSizes: true /* true | false */,
-  disableRipple: true /* true | false */,
+  disableRipple: false /* true | false */,
   disableCustomizer: false /* true | false */,
   toastPosition: 'top-right' /* top-left | top-center | top-right | bottom-left | bottom-center | bottom-right */
 }
