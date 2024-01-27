@@ -111,7 +111,7 @@ const UserViewOverview = ({ invoiceData }: Props) => {
                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                       <Typography sx={{ fontWeight: 500 }}>Lester McCarthy (Client)</Typography>
                       <Typography variant='body2' sx={{ color: 'text.disabled' }}>
-                        CEO of ThemeSelection
+                        CEO of Loopcrack
                       </Typography>
                     </Box>
                   </Box>

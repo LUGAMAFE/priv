@@ -52,7 +52,7 @@ const BillingAddressCard = () => {
                       value={value}
                       label='Company Name'
                       onChange={onChange}
-                      placeholder='ThemeSelection'
+                      placeholder='Loopcrack'
                       error={Boolean(errors.companyName)}
                     />
                   )}

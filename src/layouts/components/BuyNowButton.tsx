@@ -12,7 +12,7 @@ const BuyNowButton = () => {
         component='a'
         target='_blank'
         variant='contained'
-        href='https://themeselection.com/item/sneat-mui-react-nextjs-admin-template/'
+        href='https://loopcrack.com/item/sneat-mui-react-nextjs-admin-template/'
         sx={{
           backgroundColor: '#ff3e1d',
           boxShadow: '0 1px 20px 1px #ff3e1d !important',

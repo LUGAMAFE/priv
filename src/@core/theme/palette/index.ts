@@ -6,8 +6,8 @@ const DefaultPalette = (mode: Palette['mode'], settings: Settings): Palette => {
   // ** Vars
   const whiteColor = '#FFF'
   const lightColor = '50, 71, 92'
-  const darkColor = '219, 219, 235'
-  const darkPaperBgColor = '#2B2C40'
+  const darkColor = '156,160,174'
+  const darkPaperBgColor = '#14131F'
   const mainColor = mode === 'light' ? lightColor : darkColor
 
   const defaultBgColor = () => {
@@ -17,7 +17,7 @@ const DefaultPalette = (mode: Palette['mode'], settings: Settings): Palette => {
       return darkPaperBgColor
     } else if (mode === 'light') {
       return '#F5F5F9'
-    } else return '#232333'
+    } else return '#191827'
   }
 
   const collapseTogglerBgColor = () => {
@@ -29,7 +29,7 @@ const DefaultPalette = (mode: Palette['mode'], settings: Settings): Palette => {
       }
     } else {
       if (settings.mode === 'dark') {
-        return '#232333'
+        return '#191827'
       } else {
         return '#F5F5F9'
       }
@@ -44,7 +44,7 @@ const DefaultPalette = (mode: Palette['mode'], settings: Settings): Palette => {
       lightPaperBg: whiteColor,
       darkPaperBg: darkPaperBgColor,
       collapseTogglerBg: collapseTogglerBgColor(),
-      bodyBg: mode === 'light' ? '#F5F5F9' : '#232333', // Same as palette.background.default but doesn't consider bordered skin
+      bodyBg: mode === 'light' ? '#F5F5F9' : '#191827', // Same as palette.background.default but doesn't consider bordered skin
       trackBg: mode === 'light' ? '#EBEEF0' : '#444463',
       avatarBg: mode === 'light' ? '#F0EFF0' : '#3F3B59',
       tableHeaderBg: mode === 'light' ? '#F3F4F6' : '#353649'
@@ -55,9 +55,9 @@ const DefaultPalette = (mode: Palette['mode'], settings: Settings): Palette => {
       white: whiteColor
     },
     primary: {
-      light: '#8082FF',
-      main: '#696CFF',
-      dark: '#6062E8',
+      light: '#F13D6D',
+      main: '#E80256',
+      dark: '#C7015D',
       contrastText: whiteColor
     },
     secondary: {
@@ -67,9 +67,9 @@ const DefaultPalette = (mode: Palette['mode'], settings: Settings): Palette => {
       contrastText: whiteColor
     },
     error: {
-      light: '#FF5B3F',
-      main: '#FF3E1D',
-      dark: '#E8381A',
+      light: '#EC8048',
+      main: '#E04911',
+      dark: '#C0300C',
       contrastText: whiteColor
     },
     warning: {
@@ -107,11 +107,11 @@ const DefaultPalette = (mode: Palette['mode'], settings: Settings): Palette => {
       A700: '#616161'
     },
     text: {
-      primary: `rgba(${mainColor}, 0.87)`,
-      secondary: `rgba(${mainColor}, 0.6)`,
+      primary: mode === 'light' ? `rgba(${mainColor}, 0.87)` : '#ffffff',
+      secondary: mode === 'light' ? `rgba(${mainColor}, 0.6)` : '#aaafbe',
       disabled: `rgba(${mainColor}, 0.38)`
     },
-    divider: `rgba(${mainColor}, 0.12)`,
+    divider: mode === 'light' ? `rgba(${mainColor}, 0.12)` : '#454367',
     background: {
       paper: mode === 'light' ? whiteColor : darkPaperBgColor,
       default: defaultBgColor()

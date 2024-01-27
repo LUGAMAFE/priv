@@ -58,7 +58,7 @@ const themeConfig: ThemeConfig = {
   footer: 'static' /* fixed | static | hidden */,
 
   // ** Routing Configs
-  routingLoader: true /* true | false */,
+  routingLoader: false /* true | false */,
 
   // ** Navigation (Menu) Configs
   navHidden: false /* true | false */,
@@ -75,7 +75,7 @@ const themeConfig: ThemeConfig = {
 
   // ** AppBar Configs
   appBar: 'fixed' /* fixed | static | hidden /*! Note: hidden value will only work for Vertical Layout */,
-  appBarBlur: false /* true | false */,
+  appBarBlur: true /* true | false */,
 
   // ** Other Configs
   responsiveFontSizes: true /* true | false */,

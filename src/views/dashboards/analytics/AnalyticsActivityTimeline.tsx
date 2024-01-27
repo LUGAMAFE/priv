@@ -97,7 +97,7 @@ const AnalyticsActivityTimeline = () => {
                 <Avatar src='/images/avatars/3.png' sx={{ mr: 2.25, width: 38, height: 38 }} />
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Typography sx={{ fontWeight: 500 }}>Steven Nash (Client)</Typography>
-                  <Typography sx={{ color: 'text.secondary' }}>CEO of ThemeSelection</Typography>
+                  <Typography sx={{ color: 'text.secondary' }}>CEO of Loopcrack</Typography>
                 </Box>
               </Box>
             </TimelineContent>

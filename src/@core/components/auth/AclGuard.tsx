@@ -15,7 +15,7 @@ import { buildAbilityFor } from 'src/configs/acl'
 
 // ** Component Import
 import NotAuthorized from 'src/pages/401'
-import Spinner from 'src/@core/components/spinner'
+import FallbackSpinner from 'src/@core/layouts/components/FallbackSpinner'
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Hooks
@@ -53,7 +53,7 @@ const AclGuard = (props: AclGuardProps) => {
   if (auth.user && !ability) {
     ability = buildAbilityFor(auth.user.role, aclAbilities.subject)
     if (router.route === '/') {
-      return <Spinner />
+      return <FallbackSpinner />
     }
   }
 
@@ -71,7 +71,7 @@ const AclGuard = (props: AclGuardProps) => {
   // Check the access of current user and render pages
   if (ability && auth.user && ability.can(aclAbilities.action, aclAbilities.subject)) {
     if (router.route === '/') {
-      return <Spinner />
+      return <FallbackSpinner />
     }
 
     return <AbilityContext.Provider value={ability}>{children}</AbilityContext.Provider>

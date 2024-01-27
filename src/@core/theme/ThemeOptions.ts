@@ -35,7 +35,7 @@ const themeOptions = (settings: Settings, overrideMode: PaletteMode): ThemeOptio
       },
       mixins: {
         toolbar: {
-          minHeight: 64
+          minHeight: 57
         }
       },
       shadows: shadows(mode === 'semi-dark' ? overrideMode : mode),

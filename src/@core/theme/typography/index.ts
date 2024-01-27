@@ -1,6 +1,6 @@
 const typography = {
   fontFamily: [
-    'Public Sans',
+    'Josefin Sans',
     'sans-serif',
     '-apple-system',
     'BlinkMacSystemFont',

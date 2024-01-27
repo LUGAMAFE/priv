@@ -603,7 +603,7 @@ const UserViewBilling = () => {
                           </Typography>
                         </TableCell>
                         <TableCell>
-                          <Typography sx={{ color: 'text.secondary' }}>ThemeSelection</Typography>
+                          <Typography sx={{ color: 'text.secondary' }}>Loopcrack</Typography>
                         </TableCell>
                       </TableRow>
                       <TableRow>
@@ -811,7 +811,7 @@ const UserViewBilling = () => {
                     />
                   ))}
                   <Grid item xs={12} sm={6}>
-                    <TextField fullWidth defaultValue='ThemeSelection' label='Company Name' />
+                    <TextField fullWidth defaultValue='Loopcrack' label='Company Name' />
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <TextField fullWidth type='email' defaultValue='gertrude@gmail.com' label='Email' />

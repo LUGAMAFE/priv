@@ -57,7 +57,7 @@ const initialData: Data = {
   timezone: 'gmt-12',
   country: 'australia',
   email: 'john.doe@example.com',
-  organization: 'ThemeSelection'
+  organization: 'Loopcrack'
 }
 
 const ImgStyled = styled('img')(({ theme }) => ({
@@ -197,7 +197,7 @@ const TabAccount = () => {
                   <TextField
                     fullWidth
                     label='Organization'
-                    placeholder='ThemeSelection'
+                    placeholder='Loopcrack'
                     value={formData.organization}
                     onChange={e => handleFormChange('organization', e.target.value)}
                   />

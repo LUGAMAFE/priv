@@ -644,14 +644,14 @@ const navigation: HorizontalNavItemsType = [
         icon: 'bx:support',
         externalLink: true,
         openInNewTab: true,
-        path: 'https://themeselection.com/support'
+        path: 'https://loopcrack.com/support'
       },
       {
         title: 'Documentation',
         icon: 'bx:file',
         externalLink: true,
         openInNewTab: true,
-        path: 'https://demos.themeselection.com/sneat-mui-react-nextjs-admin-template/documentation/'
+        path: 'https://demos.loopcrack.com/sneat-mui-react-nextjs-admin-template/documentation/'
       }
     ]
   }
