@@ -2,9 +2,9 @@
 import Link from 'next/link'
 
 // ** MUI Imports
+import Box, { BoxProps } from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import Box, { BoxProps } from '@mui/material/Box'
 import { styled, useTheme } from '@mui/material/styles'
 
 // ** Type Import
@@ -14,6 +14,7 @@ import { LayoutProps } from 'src/@core/layouts/types'
 import Icon from 'src/@core/components/icon'
 
 // ** Configs
+import LogoIcon from 'src/@core/components/logo-icon'
 import themeConfig from 'src/configs/themeConfig'
 
 interface Props {
@@ -118,7 +119,7 @@ const VerticalNavHeader = (props: Props) => {
         userNavMenuBranding(props)
       ) : (
         <LinkStyled href='/'>
-          <img width={70} height={28} alt='Congratulations John' src={`/images/logo.svg`} />
+          <LogoIcon width={70} height={28} />
           <Typography
             variant='h5'
             sx={{

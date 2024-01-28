@@ -218,7 +218,7 @@ const VerticalNavGroup = (props: Props) => {
             sx={{
               mx: 4,
               py: 2.5,
-              borderRadius: 1,
+              borderRadius: 2,
               transition: 'padding .25s ease-in-out',
               width: theme => `calc(100% - ${theme.spacing(4 * 2)})`,
               pr: navCollapsed && !navHover ? ((collapsedNavWidth - navigationBorderWidth - 22) / 4 - 8) / 2 : 2.5,

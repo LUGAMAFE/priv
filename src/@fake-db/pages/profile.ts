@@ -408,7 +408,7 @@ const data: DataType = {
       client: 'Jerry Greene',
       title: 'Figma Dashboard',
       avatar: '/images/icons/project-icons/figma-label.png',
-      description: 'Use this template to organize your design project. Some of the key features are…',
+      description: 'Some of the key features are…',
       avatarGroup: [
         { avatar: '/images/avatars/5.png', name: 'Kim Merchent' },
         { avatar: '/images/avatars/6.png', name: "Sam D'souza" },

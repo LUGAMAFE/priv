@@ -11,6 +11,7 @@ import { styled, useTheme } from '@mui/material/styles'
 import themeConfig from 'src/configs/themeConfig'
 
 // ** Hook
+import LogoIcon from 'src/@core/components/logo-icon'
 import { useSettings } from 'src/@core/hooks/useSettings'
 
 const LinkStyled = styled(Link)(({ theme }) => ({
@@ -44,7 +45,7 @@ const BlankLayoutAppBar = () => {
         }}
       >
         <LinkStyled href='/'>
-          <img width={70} height={28} alt='Congratulations John' src={`/images/logo.svg`} />
+          <LogoIcon width={70} height={28} />
           <Typography
             variant='h5'
             sx={{

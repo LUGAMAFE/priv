@@ -836,7 +836,7 @@ const projectListData: ProjectListDataType[] = [
     totalTask: '148/280',
     progressColor: 'info',
     projectType: 'UI/UX Project',
-    projectTitle: 'Admin template Project',
+    projectTitle: 'Admin Project',
     img: '/images/icons/project-icons/xd-label.png'
   }
 ]

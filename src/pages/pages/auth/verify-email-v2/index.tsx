@@ -5,11 +5,11 @@ import { ReactNode } from 'react'
 import Link from 'next/link'
 
 // ** MUI Components
+import Box, { BoxProps } from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import Box, { BoxProps } from '@mui/material/Box'
-import useMediaQuery from '@mui/material/useMediaQuery'
 import { styled, useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
@@ -18,6 +18,7 @@ import themeConfig from 'src/configs/themeConfig'
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Hooks
+import LogoIcon from 'src/@core/components/logo-icon'
 import { useSettings } from 'src/@core/hooks/useSettings'
 
 // ** Styled Components
@@ -75,7 +76,7 @@ const VerifyEmailV2 = () => {
       >
         <Box sx={{ mx: 'auto', maxWidth: 400 }}>
           <Box sx={{ mb: 8, display: 'flex', alignItems: 'center' }}>
-            <img width={70} height={28} alt='Congratulations John' src={`/images/logo.svg`} />
+            <LogoIcon width={70} height={28} />
             <Typography
               variant='h5'
               sx={{

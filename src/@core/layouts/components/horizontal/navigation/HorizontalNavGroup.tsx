@@ -194,7 +194,7 @@ const HorizontalNavGroup = (props: Props) => {
                 ...(menuOpen ? { backgroundColor: 'action.hover' } : {}),
                 ...(!hasParent
                   ? {
-                      borderRadius: 1,
+                      borderRadius: 5,
                       '&.Mui-selected': {
                         backgroundColor: mode === 'light' ? bgColors.primaryLight.backgroundColor : 'primary.main',
                         '& .MuiTypography-root, & svg': { color: mode === 'light' ? 'primary.main' : 'common.white' }

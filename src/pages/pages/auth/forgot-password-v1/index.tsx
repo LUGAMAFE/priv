@@ -6,11 +6,11 @@ import Link from 'next/link'
 
 // ** MUI Components
 import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
 import Button from '@mui/material/Button'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
 import { styled, useTheme } from '@mui/material/styles'
 
 // ** Icon Imports
@@ -23,6 +23,7 @@ import themeConfig from 'src/configs/themeConfig'
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Demo Imports
+import LogoIcon from 'src/@core/components/logo-icon'
 import AuthIllustrationWrapper from 'src/views/pages/auth/AuthIllustrationWrapper'
 
 // ** Styled Components
@@ -44,7 +45,7 @@ const ForgotPasswordV1 = () => {
         <Card>
           <CardContent sx={{ p: `${theme.spacing(8, 8, 7)} !important` }}>
             <Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img width={70} height={28} alt='Congratulations John' src={`/images/logo.svg`} />
+              <LogoIcon width={70} height={28} />
               <Typography
                 variant='h5'
                 sx={{

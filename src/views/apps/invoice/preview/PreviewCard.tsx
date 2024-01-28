@@ -1,22 +1,23 @@
 // ** MUI Imports
-import Grid from '@mui/material/Grid'
-import Card from '@mui/material/Card'
-import Table from '@mui/material/Table'
-import Divider from '@mui/material/Divider'
-import TableRow from '@mui/material/TableRow'
-import TableHead from '@mui/material/TableHead'
-import TableBody from '@mui/material/TableBody'
-import Typography from '@mui/material/Typography'
 import Box, { BoxProps } from '@mui/material/Box'
+import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import { styled, useTheme } from '@mui/material/styles'
-import TableContainer from '@mui/material/TableContainer'
+import Divider from '@mui/material/Divider'
+import Grid from '@mui/material/Grid'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
 import TableCell, { TableCellBaseProps } from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TableRow from '@mui/material/TableRow'
+import Typography from '@mui/material/Typography'
+import { styled, useTheme } from '@mui/material/styles'
 
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
 
 // ** Types
+import LogoIcon from 'src/@core/components/logo-icon'
 import { SingleInvoiceType } from 'src/types/apps/invoiceTypes'
 
 interface Props {
@@ -52,7 +53,7 @@ const PreviewCard = ({ data }: Props) => {
             <Grid item sm={6} xs={12}>
               <Box sx={{ display: 'flex', flexDirection: 'column', mb: { sm: 0, xs: 6 } }}>
                 <Box sx={{ mb: 6, display: 'flex', alignItems: 'center' }}>
-                  <img width={70} height={28} alt='Congratulations John' src={`/images/logo.svg`} />
+                  <LogoIcon width={70} height={28} />
                   <Typography
                     variant='h5'
                     sx={{

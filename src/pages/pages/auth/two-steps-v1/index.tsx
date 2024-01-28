@@ -1,21 +1,21 @@
 // ** React Imports
-import { ReactNode, ChangeEvent, useState, KeyboardEvent } from 'react'
+import { ChangeEvent, KeyboardEvent, ReactNode, useState } from 'react'
 
 // ** Next Import
 import Link from 'next/link'
 
 // ** MUI Components
 import Box from '@mui/material/Box'
-import Card from '@mui/material/Card'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import { styled, useTheme } from '@mui/material/styles'
 import FormHelperText from '@mui/material/FormHelperText'
+import Typography from '@mui/material/Typography'
+import { styled, useTheme } from '@mui/material/styles'
 
 // ** Third Party Imports
 import Cleave from 'cleave.js/react'
-import { useForm, Controller } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
@@ -34,6 +34,7 @@ import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 
 // ** Styles
 import 'cleave.js/dist/addons/cleave-phone.us'
+import LogoIcon from 'src/@core/components/logo-icon'
 
 // ** Styled Components
 const LinkStyled = styled(Link)(({ theme }) => ({
@@ -143,7 +144,7 @@ const TwoStepsV1 = () => {
         <Card>
           <CardContent sx={{ p: `${theme.spacing(8, 8, 7)} !important` }}>
             <Box sx={{ mb: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img width={70} height={28} alt='Congratulations John' src={`/images/logo.svg`} />
+              <LogoIcon width={70} height={28} />
               <Typography
                 variant='h5'
                 sx={{

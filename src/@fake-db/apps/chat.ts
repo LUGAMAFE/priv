@@ -157,7 +157,7 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'This admin template is built with MUI!',
+          message: 'This admin dashboard is built with MUI!',
           time: 'Mon Dec 10 2018 07:46:05 GMT+0000 (GMT)',
           senderId: 11,
           feedback: {
