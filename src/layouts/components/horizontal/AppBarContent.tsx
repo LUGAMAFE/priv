@@ -5,14 +5,14 @@ import Box from '@mui/material/Box'
 import { Settings } from 'src/@core/context/settingsContext'
 
 // ** Components
-import Autocomplete from 'src/layouts/components/Autocomplete'
-import ModeToggler from 'src/@core/layouts/components/shared-components/ModeToggler'
-import UserDropdown from 'src/@core/layouts/components/shared-components/UserDropdown'
 import LanguageDropdown from 'src/@core/layouts/components/shared-components/LanguageDropdown'
+import ModeToggler from 'src/@core/layouts/components/shared-components/ModeToggler'
 import NotificationDropdown, {
   NotificationsType
 } from 'src/@core/layouts/components/shared-components/NotificationDropdown'
 import ShortcutsDropdown, { ShortcutsType } from 'src/@core/layouts/components/shared-components/ShortcutsDropdown'
+import UserDropdown from 'src/@core/layouts/components/shared-components/UserDropdown'
+import Autocomplete from 'src/layouts/components/Autocomplete'
 
 // ** Hook Import
 import { useAuth } from 'src/hooks/useAuth'
@@ -127,7 +127,7 @@ const AppBarContent = (props: Props) => {
   const auth = useAuth()
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+    <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, color: theme => theme.palette.secondary.main }}>
       {auth.user && <Autocomplete hidden={hidden} settings={settings} />}
       <LanguageDropdown settings={settings} saveSettings={saveSettings} />
       <ModeToggler settings={settings} saveSettings={saveSettings} />
