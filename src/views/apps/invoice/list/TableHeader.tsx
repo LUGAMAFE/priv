@@ -1,13 +1,11 @@
 // ** Next Import
-import Link from 'next/link'
 
 // ** MUI Imports
 import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Select from '@mui/material/Select'
-import { GridRowId } from '@mui/x-data-grid'
 import MenuItem from '@mui/material/MenuItem'
+import Select from '@mui/material/Select'
 import TextField from '@mui/material/TextField'
+import { GridRowId } from '@mui/x-data-grid'
 
 interface TableHeaderProps {
   value: string
@@ -52,9 +50,9 @@ const TableHeader = (props: TableHeaderProps) => {
           placeholder='Search Invoice'
           onChange={e => handleFilter(e.target.value)}
         />
-        <Button sx={{ mb: 2 }} component={Link} variant='contained' href='/apps/invoice/add'>
+        {/* <Button sx={{ mb: 2 }} component={Link} variant='contained' href='/apps/invoice/add'>
           Create Invoice
-        </Button>
+        </Button> */}
       </Box>
     </Box>
   )

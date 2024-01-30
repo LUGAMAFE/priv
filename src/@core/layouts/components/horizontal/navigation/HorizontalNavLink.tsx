@@ -9,10 +9,10 @@ import { useRouter } from 'next/router'
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import List from '@mui/material/List'
-import { styled } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
-import ListItemIcon from '@mui/material/ListItemIcon'
 import MuiListItem, { ListItemProps } from '@mui/material/ListItem'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import Typography from '@mui/material/Typography'
+import { styled } from '@mui/material/styles'
 
 // ** Third Party Imports
 import clsx from 'clsx'
@@ -21,20 +21,20 @@ import clsx from 'clsx'
 import themeConfig from 'src/configs/themeConfig'
 
 // ** Types
-import { NavLink } from 'src/@core/layouts/types'
 import { Settings } from 'src/@core/context/settingsContext'
+import { NavLink } from 'src/@core/layouts/types'
 
 // ** Custom Components Imports
-import UserIcon from 'src/layouts/components/UserIcon'
 import Translations from 'src/layouts/components/Translations'
+import UserIcon from 'src/layouts/components/UserIcon'
 import CanViewNavLink from 'src/layouts/components/acl/CanViewNavLink'
 
 // ** Hook Import
 import useBgColor, { UseBgColorType } from 'src/@core/hooks/useBgColor'
 
 // ** Util Imports
-import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 import { handleURLQueries } from 'src/@core/layouts/utils'
+import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 
 interface Props {
   item: NavLink
@@ -128,7 +128,7 @@ const HorizontalNavLink = (props: Props) => {
                   '& svg': { transition: 'transform .25s ease-in-out' },
                   ...(icon === navSubItemIcon && { color: 'text.disabled' }),
                   ...(isNavLinkActive() && {
-                    color: 'primary.main',
+                    color: 'white',
                     ...(hasParent &&
                       icon === navSubItemIcon && {
                         '& svg': {

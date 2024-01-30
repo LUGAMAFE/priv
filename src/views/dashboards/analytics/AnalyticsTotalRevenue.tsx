@@ -4,36 +4,33 @@ import { MouseEvent, useState } from 'react'
 // ** MUI Import
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
-import Menu from '@mui/material/Menu'
-import Button from '@mui/material/Button'
-import MenuItem from '@mui/material/MenuItem'
-import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import Grid, { GridProps } from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 import { styled, useTheme } from '@mui/material/styles'
 
 // ** Icons Imports
-import Icon from 'src/@core/components/icon'
 
 // ** Third Party Imports
 import { ApexOptions } from 'apexcharts'
 
 // ** Custom Components Imports
-import CustomAvatar from 'src/@core/components/mui/avatar'
 import ReactApexcharts from 'src/@core/components/react-apexcharts'
 
 // ** Hook Import
 import { useSettings } from 'src/@core/hooks/useSettings'
 
 // ** Util Import
+import { formatCurrency } from 'src/@core/utils/format'
 import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
+import CardCustom from 'src/views/ui/cards/statistics/CardCustom'
 
-const yearOptions = [new Date().getFullYear() - 1, new Date().getFullYear() - 2, new Date().getFullYear() - 3]
+const currentYear = new Date().getFullYear()
+const monthNames = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic', 'Ene']
+const last7Months = monthNames.slice(-7)
+const yearOptions = [currentYear - 1, currentYear - 2, currentYear - 3]
 
-const series = [
-  { name: `${new Date().getFullYear() - 1}`, data: [18, 7, 15, 29, 18, 12, 9] },
-  { name: `${new Date().getFullYear() - 2}`, data: [-13, -18, -9, -14, -5, -17, -15] }
-]
+const series = [{ name: `${currentYear}`, data: [18067, 7083, 15509, 29050, 18002, 12125, 9080, 10080] }]
 
 const StyledGrid = styled(Grid)<GridProps>(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
@@ -67,7 +64,16 @@ const AnalyticsTotalRevenue = () => {
       parentHeightOffset: 0,
       toolbar: { show: false }
     },
-    dataLabels: { enabled: false },
+    dataLabels: {
+      enabled: true,
+      formatter: function (value: number) {
+        return formatCurrency(value) // Agrega el signo de peso mexicano
+      },
+      style: {
+        fontSize: '12px',
+        colors: ['#FFF']
+      }
+    },
     stroke: {
       width: 6,
       lineCap: 'round',
@@ -117,10 +123,10 @@ const AnalyticsTotalRevenue = () => {
       }
     },
     xaxis: {
+      categories: last7Months,
       axisTicks: { show: false },
       crosshairs: { opacity: 0 },
       axisBorder: { show: false },
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
       labels: {
         style: {
           fontSize: '14px',
@@ -131,6 +137,9 @@ const AnalyticsTotalRevenue = () => {
     },
     yaxis: {
       labels: {
+        formatter: function (value: number) {
+          return formatCurrency(value) // Agrega el signo de peso mexicano
+        },
         style: {
           fontSize: '14px',
           colors: theme.palette.text.disabled,
@@ -178,7 +187,7 @@ const AnalyticsTotalRevenue = () => {
     chart: {
       sparkline: { enabled: true }
     },
-    labels: ['Growth'],
+    labels: ['Mas'],
     stroke: { dashArray: 5 },
     colors: [hexToRGBA(theme.palette.primary.main, 1)],
     states: {
@@ -203,15 +212,15 @@ const AnalyticsTotalRevenue = () => {
     },
     plotOptions: {
       radialBar: {
-        endAngle: 150,
+        endAngle: 120,
         startAngle: -140,
-        hollow: { size: '55%' },
+        hollow: { size: '50%' },
         track: { background: 'transparent' },
         dataLabels: {
           name: {
             offsetY: 25,
             fontWeight: 600,
-            fontSize: '16px',
+            fontSize: '14px',
             color: theme.palette.text.secondary,
             fontFamily: theme.typography.fontFamily
           },
@@ -264,59 +273,26 @@ const AnalyticsTotalRevenue = () => {
           sx={{ '& .apexcharts-series[rel="2"]': { transform: 'translateY(-10px)' } }}
         >
           <CardContent sx={{ p: `${theme.spacing(5, 6, 0)} !important` }}>
-            <Typography variant='h6'>Total Revenue</Typography>
+            <Typography variant='h6'>Ganancias últimos meses</Typography>
           </CardContent>
           <ReactApexcharts type='bar' height={312} options={barOptions} series={series} />
         </StyledGrid>
         <Grid item xs={12} sm={5} xl={4}>
           <CardContent sx={{ p: `${theme.spacing(8, 6, 7.5)} !important` }}>
-            <Box sx={{ textAlign: 'center' }}>
-              <Button
-                size='small'
-                variant='outlined'
-                aria-haspopup='true'
-                onClick={handleClick}
-                sx={{ '& svg': { ml: 0.5 } }}
-              >
-                {new Date().getFullYear()}
-                <Icon icon='bx:chevron-down' />
-              </Button>
-              <Menu
-                keepMounted
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                open={Boolean(anchorEl)}
-                anchorOrigin={{ vertical: 'bottom', horizontal: direction === 'ltr' ? 'right' : 'left' }}
-                transformOrigin={{ vertical: 'top', horizontal: direction === 'ltr' ? 'right' : 'left' }}
-              >
-                {yearOptions.map((year: number) => (
-                  <MenuItem key={year} onClick={handleClose}>
-                    {year}
-                  </MenuItem>
-                ))}
-              </Menu>
-              <ReactApexcharts type='radialBar' height={200} series={[78]} options={radialBarOptions} />
-              <Typography sx={{ mb: 7.5, fontWeight: 600, color: 'text.secondary' }}>62% Company Growth</Typography>
-            </Box>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <Box sx={{ mr: 4, display: 'flex', alignItems: 'center' }}>
-                <CustomAvatar skin='light' variant='rounded' sx={{ mr: 2.5, width: 38, height: 38 }}>
-                  <Icon icon='bx:dollar' />
-                </CustomAvatar>
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <Typography variant='body2'>{new Date().getFullYear()}</Typography>
-                  <Typography sx={{ fontWeight: 500 }}>$32.5k</Typography>
-                </Box>
-              </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <CustomAvatar skin='light' color='info' variant='rounded' sx={{ mr: 2.5, width: 38, height: 38 }}>
-                  <Icon icon='bx:wallet' />
-                </CustomAvatar>
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <Typography variant='body2'>{new Date().getFullYear() - 1}</Typography>
-                  <Typography sx={{ fontWeight: 500 }}>$41.2k</Typography>
-                </Box>
-              </Box>
+            <CardCustom
+              title='Ganancias Este Mes'
+              stats='$14,679 MXN'
+              trendNumber={78}
+              avatarSrc='/images/cards/stats-vertical-wallet.png'
+              optionsMenuProps={{
+                options: ['Ver Detalles'],
+                iconButtonProps: { size: 'small', className: 'card-more-options', sx: { color: 'text.secondary' } }
+              }}
+              extra='+ que el mes anterior'
+            />
+            <Box sx={{ textAlign: 'center', mt: 2 }}>
+              <ReactApexcharts type='radialBar' height={150} series={[78]} options={radialBarOptions} />
+              <Typography sx={{ mt: 0, fontWeight: 600, color: 'text.secondary' }}>Crecimiento de ganancias</Typography>
             </Box>
           </CardContent>
         </Grid>

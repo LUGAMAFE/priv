@@ -97,3 +97,11 @@ export const formatCVC = (value: string, cardNumber: string, Payment: PaymentTyp
 
   return clearValue.slice(0, maxLength)
 }
+
+export const formatCurrency = (value: number) => {
+  return new Intl.NumberFormat('es-MX', {
+    style: 'currency',
+    currency: 'MXN',
+    minimumFractionDigits: 0 // Puedes ajustar el número de decimales aquí
+  }).format(value)
+}

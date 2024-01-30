@@ -1,4 +1,20 @@
 {
+  "home": {
+    "congratulations": "Congratulations {{name}}! 🎉",
+    "newSuscribers": "You have {{count}} new subscribers today.",
+    "checkYourEarnings": "Check your earnings and view your progress in the statistics panel."
+  },
+  "nav": {
+    "statements": "Statements",
+    "engagement": "Engagement",
+    "fans": "Fans",
+    "reach": "Reach",
+    "earnings": "Earnings",
+    "payoutRequests": "Payout Requests",
+    "chargebacks": "Chargebacks",
+    "referrals": "Referrals"
+  },
+  "Statistics": "Statistics",
   "Dashboards": "Dashboards",
   "Analytics": "Analytics",
   "CRM": "CRM",
@@ -6,7 +22,7 @@
   "Apps & Pages": "Apps & Pages",
   "Apps": "Apps",
   "Email": "Email",
-  "Chat": "Chat",
+  "Chat": "Messages",
   "Calendar": "Calendar",
   "Invoice": "Invoice",
   "List": "List",

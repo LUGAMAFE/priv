@@ -3,8 +3,7 @@ import Link from 'next/link'
 
 // ** MUI Imports
 import Box from '@mui/material/Box'
-import { Theme } from '@mui/material/styles'
-import { styled } from '@mui/material/styles'
+import { styled, Theme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
@@ -25,7 +24,7 @@ const FooterContent = () => {
           ❤️
         </Box>
         {` by `}
-        <LinkStyled target='_blank' href='https://loopcrack.com/'>
+        <LinkStyled target='_blank' href='https://www.linkedin.com/in/luis-javier-martinez-fernandez-15b413b3/'>
           Luis Martinez
         </LinkStyled>
       </Typography>

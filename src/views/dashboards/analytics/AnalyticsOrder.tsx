@@ -1,8 +1,9 @@
 // ** MUI Imports
+import { Box } from '@mui/material'
 import Card from '@mui/material/Card'
-import { useTheme } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
+import Typography from '@mui/material/Typography'
+import { useTheme } from '@mui/material/styles'
 
 // ** Third Party Imports
 import { ApexOptions } from 'apexcharts'
@@ -10,7 +11,7 @@ import { ApexOptions } from 'apexcharts'
 // ** Custom Components Imports
 import ReactApexcharts from 'src/@core/components/react-apexcharts'
 
-const series = [{ data: [30, 70, 35, 55, 45, 70] }]
+const series = [{ data: [185, 207, 226, 250, 320, 350, 400, 410, 452] }]
 
 const AnalyticsOrder = () => {
   // ** Hook
@@ -19,15 +20,25 @@ const AnalyticsOrder = () => {
   const options: ApexOptions = {
     chart: {
       parentHeightOffset: 0,
-      toolbar: { show: false }
+      toolbar: { show: false },
+      zoom: {
+        enabled: false // deshabilita la función de zoom
+      }
     },
-    tooltip: { enabled: false },
-    dataLabels: { enabled: false },
+
+    tooltip: {
+      enabled: true
+
+      //followCursor: true // Habilita que el tooltip siga al cursor
+    },
+
+    // dataLabels: { enabled: false },
     stroke: {
       width: 3,
       curve: 'smooth',
       lineCap: 'round'
     },
+
     grid: {
       show: false,
       padding: {
@@ -67,12 +78,31 @@ const AnalyticsOrder = () => {
         color: theme.palette.success.main
       }
     },
+
+    // xaxis: {
+    //   labels: { show: false },
+    //   axisTicks: { show: false },
+    //   axisBorder: { show: false }
+    // },
+    // legend: {
+    //   position: 'top',
+    //   horizontalAlign: 'left'
+    // }
     xaxis: {
-      labels: { show: false },
-      axisTicks: { show: false },
-      axisBorder: { show: false }
+      categories: ['25 Ene', '26 Ene', '27 Ene', '28 Ene', '29 Ene', '30 Ene', '31 Ene', '1 Feb', '2 Feb'], // Etiquetas del eje X para los últimos 5 días
+      labels: { show: true },
+      crosshairs: {
+        show: true // Habilita el crosshair para eje X
+      }
     },
-    yaxis: { show: false },
+
+    yaxis: {
+      show: false,
+      crosshairs: {
+        show: true // Habilita el crosshair para eje X
+      }
+    },
+
     markers: {
       size: 1,
       offsetY: 2,
@@ -94,12 +124,14 @@ const AnalyticsOrder = () => {
   }
 
   return (
-    <Card>
+    <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
       <CardContent sx={{ p: theme => `${theme.spacing(3.5, 5, 0)} !important` }}>
-        <Typography sx={{ fontWeight: 600, color: 'text.secondary' }}>Order</Typography>
-        <Typography variant='h5'>276k</Typography>
+        <Typography sx={{ fontWeight: 600, color: 'text.secondary' }}>Suscriptores Totales</Typography>
+        <Typography variant='h5'>452</Typography>
       </CardContent>
-      <ReactApexcharts type='area' height={110} options={options} series={series} />
+      <Box height={'100%'}>
+        <ReactApexcharts type='area' height={'100%'} options={options} series={series} />
+      </Box>
     </Card>
   )
 }

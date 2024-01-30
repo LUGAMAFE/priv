@@ -1,18 +1,18 @@
 // ** React Imports
-import { useEffect, Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 
 // ** Next Import
 import { useRouter } from 'next/router'
 
 // ** MUI Imports
+import Box, { BoxProps } from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import Collapse from '@mui/material/Collapse'
 import ListItem from '@mui/material/ListItem'
-import { styled } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
-import Box, { BoxProps } from '@mui/material/Box'
-import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import Typography from '@mui/material/Typography'
+import { styled } from '@mui/material/styles'
 
 // ** Third Party Imports
 import clsx from 'clsx'
@@ -24,20 +24,20 @@ import Icon from 'src/@core/components/icon'
 import themeConfig from 'src/configs/themeConfig'
 
 // ** Type Import
-import { NavGroup, LayoutProps } from 'src/@core/layouts/types'
+import { LayoutProps, NavGroup } from 'src/@core/layouts/types'
 
 // ** Custom Components Imports
-import VerticalNavItems from './VerticalNavItems'
-import UserIcon from 'src/layouts/components/UserIcon'
 import Translations from 'src/layouts/components/Translations'
+import UserIcon from 'src/layouts/components/UserIcon'
 import CanViewNavGroup from 'src/layouts/components/acl/CanViewNavGroup'
+import VerticalNavItems from './VerticalNavItems'
 
 // ** Hook Import
 import useBgColor, { UseBgColorType } from 'src/@core/hooks/useBgColor'
 
 // ** Util Imports
-import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 import { hasActiveChild, removeChildren } from 'src/@core/layouts/utils'
+import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 
 interface Props {
   item: NavGroup

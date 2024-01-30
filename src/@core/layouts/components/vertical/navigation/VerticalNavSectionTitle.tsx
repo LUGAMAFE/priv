@@ -1,13 +1,13 @@
 // ** MUI Imports
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
-import { styled } from '@mui/material/styles'
-import Typography, { TypographyProps } from '@mui/material/Typography'
 import MuiListSubheader, { ListSubheaderProps } from '@mui/material/ListSubheader'
+import Typography, { TypographyProps } from '@mui/material/Typography'
+import { styled } from '@mui/material/styles'
 
 // ** Types
-import { NavSectionTitle } from 'src/@core/layouts/types'
 import { Settings } from 'src/@core/context/settingsContext'
+import { NavSectionTitle } from 'src/@core/layouts/types'
 
 // ** Custom Components Imports
 import Translations from 'src/layouts/components/Translations'

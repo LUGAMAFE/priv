@@ -2,18 +2,17 @@
 import Grid from '@mui/material/Grid'
 
 // ** Demo Component Imports
+import AnalyticsActivityTimeline from 'src/views/dashboards/analytics/AnalyticsActivityTimeline'
+import AnalyticsCongratulations from 'src/views/dashboards/analytics/AnalyticsCongratulations'
 import AnalyticsOrder from 'src/views/dashboards/analytics/AnalyticsOrder'
-import AnalyticsSales from 'src/views/dashboards/analytics/AnalyticsSales'
-import AnalyticsRevenue from 'src/views/dashboards/analytics/AnalyticsRevenue'
+import AnalyticsOrderStatistics from 'src/views/dashboards/analytics/AnalyticsOrderStatistics'
 import AnalyticsPayments from 'src/views/dashboards/analytics/AnalyticsPayments'
 import AnalyticsProfitReport from 'src/views/dashboards/analytics/AnalyticsProfitReport'
-import AnalyticsTotalRevenue from 'src/views/dashboards/analytics/AnalyticsTotalRevenue'
-import AnalyticsTransactions from 'src/views/dashboards/analytics/AnalyticsTransactions'
+import AnalyticsRevenue from 'src/views/dashboards/analytics/AnalyticsRevenue'
 import AnalyticsTabsWithChart from 'src/views/dashboards/analytics/AnalyticsTabsWithChart'
 import AnalyticsTabsWithTable from 'src/views/dashboards/analytics/AnalyticsTabsWithTable'
-import AnalyticsCongratulations from 'src/views/dashboards/analytics/AnalyticsCongratulations'
-import AnalyticsOrderStatistics from 'src/views/dashboards/analytics/AnalyticsOrderStatistics'
-import AnalyticsActivityTimeline from 'src/views/dashboards/analytics/AnalyticsActivityTimeline'
+import AnalyticsTotalRevenue from 'src/views/dashboards/analytics/AnalyticsTotalRevenue'
+import AnalyticsTransactions from 'src/views/dashboards/analytics/AnalyticsTransactions'
 
 // ** Styled Component Import
 import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
@@ -21,19 +20,12 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 const AnalyticsDashboard = () => {
   return (
     <ApexChartWrapper>
-      <Grid container spacing={6}>
-        <Grid item xs={12} lg={8} sx={{ order: -1 }}>
+      <Grid container spacing={6} justifyContent={'center'}>
+        <Grid item xs={12} md={6} sx={{ order: -1 }}>
           <AnalyticsCongratulations />
         </Grid>
-        <Grid item xs={12} md={4} sx={{ order: -1 }}>
-          <Grid container spacing={6}>
-            <Grid item xs={6} md={12} lg={6}>
-              <AnalyticsOrder />
-            </Grid>
-            <Grid item xs={6} md={12} lg={6}>
-              <AnalyticsSales />
-            </Grid>
-          </Grid>
+        <Grid item xs={12} md={6} sx={{ order: -1 }}>
+          <AnalyticsOrder />
         </Grid>
         <Grid item xs={12} lg={8}>
           <AnalyticsTotalRevenue />

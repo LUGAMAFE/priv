@@ -1,4 +1,16 @@
 {
+  "home": {
+    "congratulations": "Félicitations {{name}}! 🎉",
+    "newSuscribers": "Vous avez {{count}} nouveaux abonnés.",
+    "checkYourEarnings": "Vérifiez vos gains et votre progression dans le panneau des statistiques."
+  },
+  "nav": {
+    "statements": "Déclarations",
+    "engagement": "Engagement",
+    "fans": "Fans",
+    "reach": "Portée",
+  },
+  "Statistics": "Statistiques",
   "Dashboards": "Tableaux de bord",
   "Analytics": "Analytique",
   "CRM": "GRC",
@@ -6,7 +18,7 @@
   "Apps & Pages": "Applications et pages",
   "Apps": "Apps",
   "Email": "E-mail",
-  "Chat": "Discuter",
+  "chat": "Messages",
   "Calendar": "Calendrier",
   "Invoice": "Facture d'achat",
   "List": "Liste",

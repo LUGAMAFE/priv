@@ -1,10 +1,10 @@
 // ** MUI Imports
 import Card from '@mui/material/Card'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import Grid, { GridProps } from '@mui/material/Grid'
-import { styled, useTheme } from '@mui/material/styles'
+import Typography from '@mui/material/Typography'
+import { styled } from '@mui/material/styles'
+import { useTranslation } from 'react-i18next'
 
 // Styled Grid component
 const StyledGrid = styled(Grid)<GridProps>(({ theme }) => ({
@@ -28,24 +28,21 @@ const Img = styled('img')(({ theme }) => ({
 
 const AnalyticsCongratulations = () => {
   // ** Hook
-  const theme = useTheme()
+  const { t } = useTranslation()
 
   return (
-    <Card sx={{ position: 'relative' }}>
-      <CardContent sx={{ py: theme => `${theme.spacing(5)} !important` }}>
+    <Card sx={{ position: 'relative', height: '100%' }}>
+      <CardContent sx={{ py: theme => `${theme.spacing(9)} !important` }}>
         <Grid container spacing={6}>
-          <Grid item xs={12} sm={6} sx={{ textAlign: ['center', 'start'] }}>
+          <Grid item xs={12} sm={7} sx={{ textAlign: ['center', 'start'] }}>
             <Typography variant='h5' sx={{ mb: 4, color: 'primary.main' }}>
-              Congratulations John! 🎉
+              {t('home.congratulations', { name: 'Valeria Vidal' })}
             </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>You have done 72% more sales today.</Typography>
-            <Typography sx={{ mb: 3, color: 'text.secondary' }}>Check your new badge in your profile.</Typography>
-            <Button size='small' variant='outlined'>
-              View Badges
-            </Button>
+            <Typography sx={{ color: 'text.secondary' }}>{t('home.newSuscribers', { count: 20 })}</Typography>
+            <Typography sx={{ mb: 3, color: 'text.secondary' }}>{t('home.checkYourEarnings')}</Typography>
           </Grid>
-          <StyledGrid item xs={12} sm={6}>
-            <Img alt='Congratulations John' src={`/images/cards/illustration-john-${theme.palette.mode}.png`} />
+          <StyledGrid item xs={12} sm={5}>
+            <Img alt='Congratulations John' src={`/images/undraw_happy_news_re_tsbd.svg`} />
           </StyledGrid>
         </Grid>
       </CardContent>

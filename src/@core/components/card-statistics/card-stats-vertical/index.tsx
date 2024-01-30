@@ -1,8 +1,8 @@
 // ** MUI Imports
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
-import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
+import Typography from '@mui/material/Typography'
 
 // ** Types Imports
 import { CardStatsVerticalProps } from 'src/@core/components/card-statistics/types'
@@ -24,7 +24,8 @@ const CardStatsVertical = (props: CardStatsVerticalProps) => {
     trendNumber,
     optionsMenuProps,
     trend = 'positive',
-    avatarColor = 'primary'
+    avatarColor = 'primary',
+    extra
   } = props
 
   return (
@@ -65,7 +66,7 @@ const CardStatsVertical = (props: CardStatsVerticalProps) => {
             variant='body2'
             sx={{ fontWeight: 500, color: `${trend === 'positive' ? 'success' : 'error'}.main` }}
           >
-            {`${trendNumber}%`}
+            {`${trendNumber}%`} {extra}
           </Typography>
         </Box>
       </CardContent>

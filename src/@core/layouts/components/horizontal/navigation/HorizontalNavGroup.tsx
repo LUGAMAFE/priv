@@ -1,5 +1,5 @@
 // ** React Imports
-import { SyntheticEvent, useState, useEffect, Fragment } from 'react'
+import { Fragment, SyntheticEvent, useEffect, useState } from 'react'
 
 // ** Next Import
 import { useRouter } from 'next/router'
@@ -7,14 +7,14 @@ import { useRouter } from 'next/router'
 // ** MUI Imports
 import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
+import ClickAwayListener from '@mui/material/ClickAwayListener'
 import Fade from '@mui/material/Fade'
 import List from '@mui/material/List'
+import MuiListItem, { ListItemProps } from '@mui/material/ListItem'
+import ListItemIcon from '@mui/material/ListItemIcon'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
-import ListItemIcon from '@mui/material/ListItemIcon'
 import { styled, useTheme } from '@mui/material/styles'
-import ClickAwayListener from '@mui/material/ClickAwayListener'
-import MuiListItem, { ListItemProps } from '@mui/material/ListItem'
 
 // ** Third Party Imports
 import clsx from 'clsx'
@@ -27,21 +27,21 @@ import Icon from 'src/@core/components/icon'
 import themeConfig from 'src/configs/themeConfig'
 
 // ** Types
-import { NavGroup } from 'src/@core/layouts/types'
 import { Settings } from 'src/@core/context/settingsContext'
+import { NavGroup } from 'src/@core/layouts/types'
 
 // ** Custom Components Imports
-import HorizontalNavItems from './HorizontalNavItems'
-import UserIcon from 'src/layouts/components/UserIcon'
 import Translations from 'src/layouts/components/Translations'
+import UserIcon from 'src/layouts/components/UserIcon'
 import CanViewNavGroup from 'src/layouts/components/acl/CanViewNavGroup'
+import HorizontalNavItems from './HorizontalNavItems'
 
 // ** Hook Import
 import useBgColor, { UseBgColorType } from 'src/@core/hooks/useBgColor'
 
 // ** Utils
-import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 import { hasActiveChild } from 'src/@core/layouts/utils'
+import { hexToRGBA } from 'src/@core/utils/hex-to-rgba'
 
 interface Props {
   item: NavGroup

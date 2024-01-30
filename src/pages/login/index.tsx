@@ -39,6 +39,7 @@ import { useAuth } from 'src/hooks/useAuth'
 import themeConfig from 'src/configs/themeConfig'
 
 // ** Layout Import
+import { Stack } from '@mui/material'
 import LogoIcon from 'src/@core/components/logo-icon'
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
@@ -126,11 +127,22 @@ const LoginPage = () => {
     <Box className='content-right'>
       {!hidden ? (
         <Box sx={{ p: 12, flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <LoginIllustration
-            width={700}
-            alt='login-illustration'
-            src={`/images/pages/boy-with-rocket-${theme.palette.mode}.png`}
-          />
+          <Stack direction='column' spacing={2} maxWidth={420}>
+            <LogoIcon width={140} height={80} />
+            <Typography
+              variant='h2'
+              sx={{
+                ml: 2,
+                fontWeight: 400,
+                letterSpacing: '-0.45px',
+                fontSize: '2.25rem !important',
+                lineHeight: '2.5rem !important',
+                color: theme.palette.text.secondary
+              }}
+            >
+              Un lugar exclusivo para ti y tus mayores fans.
+            </Typography>
+          </Stack>
         </Box>
       ) : null}
       <RightWrapper

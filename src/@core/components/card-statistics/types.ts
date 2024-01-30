@@ -1,7 +1,7 @@
 // ** Types
 import { IconProps } from '@iconify/react'
-import { ThemeColor } from 'src/@core/layouts/types'
 import { OptionsMenuType } from 'src/@core/components/option-menu/types'
+import { ThemeColor } from 'src/@core/layouts/types'
 
 export type CardStatsHorizontalProps = {
   title: string
@@ -24,6 +24,7 @@ export type CardStatsVerticalProps = {
   trend?: 'positive' | 'negative'
   optionsMenuProps?: OptionsMenuType
   avatarIconProps?: Omit<IconProps, 'icon'>
+  extra?: string
 }
 
 export type CardStatsTargetProps = {

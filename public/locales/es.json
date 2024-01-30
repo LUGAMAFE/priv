@@ -1,4 +1,20 @@
 {
+    "home": {
+        "congratulations": "Felicidades {{name}}! 🎉",
+        "newSuscribers": "Tienes {{count}} nuevos suscriptores el dia de hoy.",
+        "checkYourEarnings": "Revisa tus ganancias y ve tu progreso en el panel de estadísticas."
+    },
+    "nav": {
+        "statements": "Estados de Cuenta",
+        "engagement": "Compromiso",
+        "fans": "Fans",
+        "reach": "Alcance",
+        "earnings": "Ganancias",
+        "payoutRequests": "Solicitudes de Pago",
+        "chargebacks": "Devoluciones",
+        "referrals": "Referidos"
+    },
+    "Statistics": "Estadísticas",
     "Dashboards": "Tableros",
     "Analytics": "Analíticas",
     "CRM": "CRM",
@@ -6,7 +22,7 @@
     "Apps & Pages": "Aplicaciones y Páginas",
     "Apps": "Aplicaciones",
     "Email": "Correo Electrónico",
-    "Chat": "Chat",
+    "Chat": "Mensajes",
     "Calendar": "Calendario",
     "Invoice": "Factura",
     "List": "Lista",

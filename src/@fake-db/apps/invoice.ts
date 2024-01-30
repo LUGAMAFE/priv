@@ -27,7 +27,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'primary',
       invoiceStatus: 'Paid',
       balance: '$724',
-      dueDate: `23 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `23 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4988,
@@ -41,9 +42,10 @@ const data: { invoices: InvoiceType[] } = {
       service: 'UI/UX Design & Development',
       total: 5219,
       avatar: '/images/avatars/1.png',
-      invoiceStatus: 'Downloaded',
+      invoiceStatus: 'Pending',
       balance: 0,
-      dueDate: `15 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `15 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Stripe'
     },
     {
       id: 4989,
@@ -59,7 +61,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/2.png',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: `03 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `03 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4990,
@@ -75,7 +78,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/3.png',
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: `11 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `11 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Stripe'
     },
     {
       id: 4991,
@@ -91,7 +95,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/4.png',
       invoiceStatus: 'Draft',
       balance: '$815',
-      dueDate: `30 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `30 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4992,
@@ -108,7 +113,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'secondary',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: `24 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `24 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Transferencia Bancaria'
     },
     {
       id: 4993,
@@ -125,7 +131,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'success',
       invoiceStatus: 'Draft',
       balance: '$407',
-      dueDate: `22 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `22 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4994,
@@ -141,7 +148,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/5.png',
       invoiceStatus: 'Paid',
       balance: '-$205',
-      dueDate: `10 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `10 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4995,
@@ -155,9 +163,10 @@ const data: { invoices: InvoiceType[] } = {
       service: 'Software Development',
       total: 3367,
       avatar: '/images/avatars/6.png',
-      invoiceStatus: 'Downloaded',
+      invoiceStatus: 'Pending',
       balance: 0,
-      dueDate: `24 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `24 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Transferencia Bancaria'
     },
     {
       id: 4996,
@@ -171,9 +180,10 @@ const data: { invoices: InvoiceType[] } = {
       service: 'Software Development',
       total: 4776,
       avatar: '/images/avatars/7.png',
-      invoiceStatus: 'Downloaded',
+      invoiceStatus: 'Pending',
       balance: '$305',
-      dueDate: `02 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `02 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4997,
@@ -189,7 +199,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/8.png',
       invoiceStatus: 'Partial Payment',
       balance: '$666',
-      dueDate: `18 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `18 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4998,
@@ -205,7 +216,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/1.png',
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: `17 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `17 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 4999,
@@ -221,7 +233,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/2.png',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: `01 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `01 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5000,
@@ -237,7 +250,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/3.png',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: `22 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `22 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5001,
@@ -253,7 +267,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/4.png',
       invoiceStatus: 'Partial Payment',
       balance: '-$202',
-      dueDate: `02 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `02 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5002,
@@ -267,9 +282,10 @@ const data: { invoices: InvoiceType[] } = {
       service: 'UI/UX Design & Development',
       total: 3668,
       avatar: '/images/avatars/5.png',
-      invoiceStatus: 'Downloaded',
+      invoiceStatus: 'Pending',
       balance: '$731',
-      dueDate: `15 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `15 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5003,
@@ -286,7 +302,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'warning',
       invoiceStatus: 'Sent',
       balance: '-$344',
-      dueDate: `17 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `17 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5004,
@@ -302,7 +319,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/6.png',
       invoiceStatus: 'Partial Payment',
       balance: '-$253',
-      dueDate: `16 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `16 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5005,
@@ -319,7 +337,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'error',
       invoiceStatus: 'Past Due',
       balance: 0,
-      dueDate: `01 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `01 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5006,
@@ -333,9 +352,10 @@ const data: { invoices: InvoiceType[] } = {
       service: 'Template Customization',
       total: 5612,
       avatar: '/images/avatars/7.png',
-      invoiceStatus: 'Downloaded',
+      invoiceStatus: 'Pending',
       balance: '$883',
-      dueDate: `12 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `12 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5007,
@@ -351,7 +371,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/8.png',
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: `19 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `19 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5008,
@@ -367,7 +388,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/1.png',
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: `30 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `30 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5009,
@@ -383,7 +405,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/2.png',
       invoiceStatus: 'Paid',
       balance: 0,
-      dueDate: `10 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `10 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5010,
@@ -397,9 +420,10 @@ const data: { invoices: InvoiceType[] } = {
       service: 'Software Development',
       total: 2060,
       avatar: '/images/avatars/3.png',
-      invoiceStatus: 'Downloaded',
+      invoiceStatus: 'Pending',
       balance: 0,
-      dueDate: `08 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `08 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5011,
@@ -416,7 +440,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'info',
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: `01 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `01 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5012,
@@ -432,7 +457,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/4.png',
       invoiceStatus: 'Partial Payment',
       balance: 0,
-      dueDate: `18 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `18 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5013,
@@ -448,7 +474,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/5.png',
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: `01 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `01 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5014,
@@ -463,9 +490,10 @@ const data: { invoices: InvoiceType[] } = {
       total: 3623,
       avatar: '',
       avatarColor: 'primary',
-      invoiceStatus: 'Downloaded',
+      invoiceStatus: 'Pending',
       balance: 0,
-      dueDate: `23 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `23 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5015,
@@ -481,7 +509,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/6.png',
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: `01 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `01 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5016,
@@ -498,7 +527,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'secondary',
       invoiceStatus: 'Paid',
       balance: '$951',
-      dueDate: `30 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `30 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5017,
@@ -514,7 +544,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/7.png',
       invoiceStatus: 'Partial Payment',
       balance: '-$153',
-      dueDate: `25 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `25 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5018,
@@ -530,7 +561,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/8.png',
       invoiceStatus: 'Draft',
       balance: 0,
-      dueDate: `10 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `10 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5019,
@@ -546,7 +578,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/1.png',
       invoiceStatus: 'Partial Payment',
       balance: '-$459',
-      dueDate: `14 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `14 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5020,
@@ -562,7 +595,8 @@ const data: { invoices: InvoiceType[] } = {
       avatar: '/images/avatars/2.png',
       invoiceStatus: 'Past Due',
       balance: 0,
-      dueDate: `28 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `28 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5021,
@@ -579,7 +613,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'success',
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: `06 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `06 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     },
     {
       id: 5022,
@@ -596,239 +631,8 @@ const data: { invoices: InvoiceType[] } = {
       avatarColor: 'error',
       invoiceStatus: 'Sent',
       balance: 0,
-      dueDate: `09 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5023,
-      issuedDate: `23 ${currentMonth} ${now.getFullYear()}`,
-      address: '11489 Griffin Plaza Apt. 927',
-      company: 'Munoz-Peters and Sons',
-      companyEmail: 'carrietorres@acosta.com',
-      country: 'Argentina',
-      contact: '(915) 448-6271',
-      name: 'Heidi Walton',
-      service: 'Software Development',
-      total: 5578,
-      avatar: '/images/avatars/3.png',
-      invoiceStatus: 'Draft',
-      balance: 0,
-      dueDate: `23 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5024,
-      issuedDate: `28 ${currentMonth} ${now.getFullYear()}`,
-      address: '276 Michael Gardens Apt. 004',
-      company: 'Shea, Velez and Garcia LLC',
-      companyEmail: 'zjohnson@nichols-powers.com',
-      country: 'Philippines',
-      contact: '(817) 700-2984',
-      name: 'Christopher Allen',
-      service: 'Software Development',
-      total: 2787,
-      avatar: '/images/avatars/4.png',
-      invoiceStatus: 'Partial Payment',
-      balance: 0,
-      dueDate: `25 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5025,
-      issuedDate: `21 ${currentMonth} ${now.getFullYear()}`,
-      address: '633 Bell Well Apt. 057',
-      company: 'Adams, Simmons and Brown Group',
-      companyEmail: 'kayla09@thomas.com',
-      country: 'Martinique',
-      contact: '(266) 611-9482',
-      name: 'Joseph Oliver',
-      service: 'UI/UX Design & Development',
-      total: 5591,
-      avatar: '',
-      avatarColor: 'warning',
-      invoiceStatus: 'Downloaded',
-      balance: 0,
-      dueDate: `07 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5026,
-      issuedDate: `24 ${currentMonth} ${now.getFullYear()}`,
-      address: '1068 Lopez Fall',
-      company: 'Williams-Lawrence and Sons',
-      companyEmail: 'melvindavis@allen.info',
-      country: 'Mexico',
-      contact: '(739) 745-9728',
-      name: 'Megan Roberts',
-      service: 'Template Customization',
-      total: 2783,
-      avatar: '/images/avatars/5.png',
-      invoiceStatus: 'Draft',
-      balance: 0,
-      dueDate: `22 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5027,
-      issuedDate: `13 ${currentMonth} ${now.getFullYear()}`,
-      address: '86691 Mackenzie Light Suite 568',
-      company: 'Deleon Inc LLC',
-      companyEmail: 'gjordan@fernandez-coleman.com',
-      country: 'Costa Rica',
-      contact: '(682) 804-6506',
-      name: 'Mary Garcia',
-      service: 'Template Customization',
-      total: 2719,
-      avatar: '',
-      avatarColor: 'info',
-      invoiceStatus: 'Sent',
-      balance: 0,
-      dueDate: `04 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5028,
-      issuedDate: `18 ${currentMonth} ${now.getFullYear()}`,
-      address: '86580 Sarah Bridge',
-      company: 'Farmer, Johnson and Anderson Group',
-      companyEmail: 'robertscott@garcia.com',
-      country: 'Cameroon',
-      contact: '(775) 366-0411',
-      name: 'Crystal Mays',
-      service: 'Template Customization',
-      total: 3325,
-      avatar: '',
-      avatarColor: 'primary',
-      invoiceStatus: 'Paid',
-      balance: '$361',
-      dueDate: `02 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5029,
-      issuedDate: `29 ${currentMonth} ${now.getFullYear()}`,
-      address: '49709 Edwin Ports Apt. 353',
-      company: 'Sherman-Johnson PLC',
-      companyEmail: 'desiree61@kelly.com',
-      country: 'Macedonia',
-      contact: '(510) 536-6029',
-      name: 'Nicholas Tanner',
-      service: 'Template Customization',
-      total: 3851,
-      avatar: '',
-      avatarColor: 'secondary',
-      invoiceStatus: 'Paid',
-      balance: 0,
-      dueDate: `25 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5030,
-      issuedDate: `07 ${currentMonth} ${now.getFullYear()}`,
-      address: '3856 Mathis Squares Apt. 584',
-      company: 'Byrd LLC PLC',
-      companyEmail: 'jeffrey25@martinez-hodge.com',
-      country: 'Congo',
-      contact: '(253) 230-4657',
-      name: 'Mr. Justin Richardson',
-      service: 'Template Customization',
-      total: 5565,
-      avatar: '',
-      avatarColor: 'success',
-      invoiceStatus: 'Draft',
-      balance: 0,
-      dueDate: `06 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5031,
-      issuedDate: `21 ${currentMonth} ${now.getFullYear()}`,
-      address: '141 Adrian Ridge Suite 550',
-      company: 'Stone-Zimmerman Group',
-      companyEmail: 'john77@anderson.net',
-      country: 'Falkland Islands (Malvinas)',
-      contact: '(612) 546-3485',
-      name: 'Jennifer Summers',
-      service: 'Template Customization',
-      total: 3313,
-      avatar: '/images/avatars/6.png',
-      invoiceStatus: 'Partial Payment',
-      balance: 0,
-      dueDate: `09 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5032,
-      issuedDate: `31 ${currentMonth} ${now.getFullYear()}`,
-      address: '01871 Kristy Square',
-      company: 'Yang, Hansen and Hart PLC',
-      companyEmail: 'ywagner@jones.com',
-      country: 'Germany',
-      contact: '(203) 601-8603',
-      name: 'Richard Payne',
-      service: 'Template Customization',
-      total: 5181,
-      avatar: '',
-      avatarColor: 'error',
-      invoiceStatus: 'Past Due',
-      balance: 0,
-      dueDate: `22 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5033,
-      issuedDate: `12 ${currentMonth} ${now.getFullYear()}`,
-      address: '075 Smith Views',
-      company: 'Jenkins-Rosales Inc',
-      companyEmail: 'calvin07@joseph-edwards.org',
-      country: 'Colombia',
-      contact: '(895) 401-4255',
-      name: 'Lori Wells',
-      service: 'Template Customization',
-      total: 2869,
-      avatar: '/images/avatars/7.png',
-      invoiceStatus: 'Partial Payment',
-      balance: 0,
-      dueDate: `22 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5034,
-      issuedDate: `10 ${currentMonth} ${now.getFullYear()}`,
-      address: '2577 Pearson Overpass Apt. 314',
-      company: 'Mason-Reed PLC',
-      companyEmail: 'eric47@george-castillo.com',
-      country: 'Paraguay',
-      contact: '(602) 336-9806',
-      name: 'Tammy Sanchez',
-      service: 'Unlimited Extended License',
-      total: 4836,
-      avatar: '',
-      avatarColor: 'warning',
-      invoiceStatus: 'Paid',
-      balance: 0,
-      dueDate: `22 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5035,
-      issuedDate: `20 ${currentMonth} ${now.getFullYear()}`,
-      address: '1770 Sandra Mountains Suite 636',
-      company: 'Foster-Pham PLC',
-      companyEmail: 'jamesjoel@chapman.net',
-      country: 'Western Sahara',
-      contact: '(936) 550-1638',
-      name: 'Dana Carey',
-      service: 'UI/UX Design & Development',
-      total: 4263,
-      avatar: '',
-      avatarColor: 'info',
-      invoiceStatus: 'Draft',
-      balance: '$762',
-      dueDate: `12 ${currentMonth} ${now.getFullYear()}`
-    },
-    {
-      id: 5036,
-      issuedDate: `19 ${currentMonth} ${now.getFullYear()}`,
-      address: '78083 Laura Pines',
-      company: 'Richardson and Sons LLC',
-      companyEmail: 'pwillis@cross.org',
-      country: 'Bhutan',
-      contact: '(687) 660-2473',
-      name: 'Andrew Burns',
-      service: 'Unlimited Extended License',
-      total: 3171,
-      avatar: '/images/avatars/8.png',
-      invoiceStatus: 'Paid',
-      balance: '-$205',
-      dueDate: `25 ${currentMonth} ${now.getFullYear()}`
+      dueDate: `09 ${currentMonth} ${now.getFullYear()}`,
+      gateWay: 'Paypal'
     }
   ]
 }

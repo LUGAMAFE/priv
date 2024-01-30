@@ -10,13 +10,13 @@ import { Direction } from '@mui/material'
 
 // ** Types
 import {
-  Skin,
-  Mode,
   AppBar,
-  Footer,
   ContentWidth,
-  VerticalNavToggle,
-  HorizontalMenuToggle
+  Footer,
+  HorizontalMenuToggle,
+  Mode,
+  Skin,
+  VerticalNavToggle
 } from 'src/@core/layouts/types'
 
 type ThemeConfig = {
@@ -58,7 +58,7 @@ const themeConfig: ThemeConfig = {
   footer: 'static' /* fixed | static | hidden */,
 
   // ** Routing Configs
-  routingLoader: false /* true | false */,
+  routingLoader: true /* true | false */,
 
   // ** Navigation (Menu) Configs
   navHidden: false /* true | false */,
