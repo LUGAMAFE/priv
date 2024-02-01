@@ -2,7 +2,7 @@
 import mock from 'src/@fake-db/mock'
 
 // ** Types
-import { ProfileUserType, ChatsObj, ContactType } from 'src/types/apps/chatTypes'
+import { ChatsObj, ContactType, ProfileUserType } from 'src/types/apps/chatTypes'
 
 const previousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000)
 const dayBeforePreviousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000 * 2)
@@ -10,9 +10,9 @@ const dayBeforePreviousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000
 const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUserType } = {
   profileUser: {
     id: 11,
-    avatar: '/images/avatars/1.png',
-    fullName: 'John Doe',
-    role: 'admin',
+    avatar: '/images/valeria.webp',
+    fullName: 'Valeria Vidal',
+    role: 'Creadora',
     about:
       'Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.',
     status: 'online',
@@ -24,89 +24,82 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
   contacts: [
     {
       id: 1,
-      fullName: 'Felecia Rower',
-      role: 'Frontend Developer',
-      about: 'Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing',
-      avatar: '/images/avatars/2.png',
+      fullName: 'Carlos Esteban',
+      role: '',
+      about: '',
+      avatar: '/images/avatars/avatar1.png',
       status: 'offline'
     },
     {
       id: 2,
       fullName: 'Adalberto Granzin',
-      role: 'UI/UX Designer',
+      role: '',
       avatarColor: 'primary',
-      about:
-        'Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.',
+      about: '',
       status: 'busy'
     },
     {
       id: 3,
-      fullName: 'Joaquina Weisenborn',
-      role: 'Town planner',
-      about:
-        'Soufflé soufflé caramels sweet roll. Jelly lollipop sesame snaps bear claw jelly beans sugar plum sugar plum.',
-      avatar: '/images/avatars/8.png',
+      fullName: 'Juan Martínez',
+      role: '',
+      about: '',
+      avatar: '/images/avatars/avatar3.png',
       status: 'busy'
     },
     {
       id: 4,
-      fullName: 'Verla Morgano',
-      role: 'Data scientist',
-      about:
-        'Chupa chups candy canes chocolate bar marshmallow liquorice muffin. Lemon drops oat cake tart liquorice tart cookie. Jelly-o cookie tootsie roll halvah.',
-      avatar: '/images/avatars/3.png',
+      fullName: 'Roberto García',
+      role: '',
+      about: '',
+      avatar: '/images/avatars/avatar4.png',
       status: 'online'
     },
     {
       id: 5,
-      fullName: 'Margot Henschke',
-      role: 'Dietitian',
+      fullName: 'Luis Hernández',
+      role: '',
       avatarColor: 'success',
-      about: 'Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing',
+      about: '',
       status: 'busy'
     },
     {
       id: 6,
       fullName: 'Sal Piggee',
-      role: 'Marketing executive',
-      about:
-        'Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.',
+      role: '',
+      about: '',
       avatar: '/images/avatars/5.png',
       status: 'online'
     },
     {
       id: 7,
       fullName: 'Miguel Guelff',
-      role: 'Special educational needs teacher',
-      about:
-        'Biscuit powder oat cake donut brownie ice cream I love soufflé. I love tootsie roll I love powder tootsie roll.',
+      role: '',
+      about: '',
       avatar: '/images/avatars/7.png',
       status: 'online'
     },
     {
       id: 8,
       fullName: 'Mauro Elenbaas',
-      role: 'Advertising copywriter',
-      about:
-        'Bear claw ice cream lollipop gingerbread carrot cake. Brownie gummi bears chocolate muffin croissant jelly I love marzipan wafer.',
+      role: '',
+      about: '',
       avatar: '/images/avatars/6.png',
       status: 'away'
     },
     {
       id: 9,
+      fullName: 'Alejandro Sánchez',
+      role: '',
       avatarColor: 'warning',
-      fullName: 'Bridgett Omohundro',
-      role: 'Designer, television/film set',
-      about:
-        'Gummies gummi bears I love candy icing apple pie I love marzipan bear claw. I love tart biscuit I love candy canes pudding chupa chups liquorice croissant.',
+      about: '',
       status: 'offline'
     },
     {
       id: 10,
+      fullName: 'Diego López',
+      role: '',
       avatarColor: 'error',
-      fullName: 'Zenia Jacobs',
-      role: 'Building surveyor',
-      about: 'Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing',
+      about: '',
       status: 'away'
     }
   ],
@@ -117,7 +110,7 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
       unseenMsgs: 1,
       chat: [
         {
-          message: "How can we help? We're here for you!",
+          message: '¡Hola! ¿Hay algo en particular que te gustaría ver hoy? 😊',
           time: 'Mon Dec 10 2018 07:45:00 GMT+0000 (GMT)',
           senderId: 11,
           feedback: {
@@ -127,7 +120,7 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'Hey John, I am looking for the best admin template. Could you please help me to find it out?',
+          message: '¡Hola Valeria! Me encantó tu último post. ¿Vas a subir algo similar pronto?',
           time: 'Mon Dec 10 2018 07:45:23 GMT+0000 (GMT)',
           senderId: 1,
           feedback: {
@@ -137,17 +130,7 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'It should be MUI v5 compatible.',
-          time: 'Mon Dec 10 2018 07:45:55 GMT+0000 (GMT)',
-          senderId: 1,
-          feedback: {
-            isSent: true,
-            isDelivered: true,
-            isSeen: true
-          }
-        },
-        {
-          message: 'Absolutely!',
+          message: 'Definitivamente, tengo planeado algo especial para esta semana. ¡Estén atentos! 😉',
           time: 'Mon Dec 10 2018 07:46:00 GMT+0000 (GMT)',
           senderId: 11,
           feedback: {
@@ -157,27 +140,7 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'This admin dashboard is built with MUI!',
-          time: 'Mon Dec 10 2018 07:46:05 GMT+0000 (GMT)',
-          senderId: 11,
-          feedback: {
-            isSent: true,
-            isDelivered: true,
-            isSeen: true
-          }
-        },
-        {
-          message: 'Looks clean and fresh UI. 😍',
-          time: 'Mon Dec 10 2018 07:46:23 GMT+0000 (GMT)',
-          senderId: 1,
-          feedback: {
-            isSent: true,
-            isDelivered: true,
-            isSeen: true
-          }
-        },
-        {
-          message: "It's perfect for my next project.",
+          message: 'Genial, estoy emocionado. ¿Puedo enviarte una solicitud especial?',
           time: 'Mon Dec 10 2018 07:46:33 GMT+0000 (GMT)',
           senderId: 1,
           feedback: {
@@ -187,17 +150,7 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'How can I purchase it?',
-          time: 'Mon Dec 10 2018 07:46:43 GMT+0000 (GMT)',
-          senderId: 1,
-          feedback: {
-            isSent: true,
-            isDelivered: true,
-            isSeen: true
-          }
-        },
-        {
-          message: 'Thanks, From our official site  😇',
+          message: 'Claro, me encanta recibir sugerencias de mis seguidores. Envíame un mensaje privado 😏',
           time: 'Mon Dec 10 2018 07:46:53 GMT+0000 (GMT)',
           senderId: 11,
           feedback: {
@@ -207,8 +160,8 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'I will purchase it for sure. 👍',
-          time: previousDay,
+          message: '¡Perfecto! Te escribo en un momento. Gracias 😊',
+          time: 'Mon Dec 10 2018 07:47:10 GMT+0000 (GMT)',
           senderId: 1,
           feedback: {
             isSent: true,
@@ -224,8 +177,8 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
       unseenMsgs: 0,
       chat: [
         {
-          message: 'Hi',
-          time: 'Mon Dec 10 2018 07:45:00 GMT+0000 (GMT)',
+          message: 'Hola, ¿te gustaría un adelanto de mi nuevo contenido exclusivo? 😘',
+          time: 'Tue Dec 11 2018 08:00:00 GMT+0000 (GMT)',
           senderId: 11,
           feedback: {
             isSent: true,
@@ -234,8 +187,8 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'Hello. How can I help You?',
-          time: 'Mon Dec 11 2018 07:45:15 GMT+0000 (GMT)',
+          message: '¡Por supuesto! Siempre espero con ansias tus publicaciones.',
+          time: 'Tue Dec 11 2018 08:05:23 GMT+0000 (GMT)',
           senderId: 2,
           feedback: {
             isSent: true,
@@ -244,43 +197,13 @@ const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUs
           }
         },
         {
-          message: 'Can I get details of my last transaction I made last month? 🤔',
-          time: 'Mon Dec 11 2018 07:46:10 GMT+0000 (GMT)',
+          message: 'Genial, tengo preparado algo muy especial. ¡No te lo pierdas!',
+          time: 'Tue Dec 11 2018 08:10:45 GMT+0000 (GMT)',
           senderId: 11,
           feedback: {
             isSent: true,
             isDelivered: true,
             isSeen: true
-          }
-        },
-        {
-          message: 'We need to check if we can provide you such information.',
-          time: 'Mon Dec 11 2018 07:45:15 GMT+0000 (GMT)',
-          senderId: 2,
-          feedback: {
-            isSent: true,
-            isDelivered: true,
-            isSeen: true
-          }
-        },
-        {
-          message: 'I will inform you as I get update on this.',
-          time: 'Mon Dec 11 2018 07:46:15 GMT+0000 (GMT)',
-          senderId: 2,
-          feedback: {
-            isSent: true,
-            isDelivered: true,
-            isSeen: true
-          }
-        },
-        {
-          message: 'If it takes long you can mail me at my mail address.',
-          time: dayBeforePreviousDay,
-          senderId: 11,
-          feedback: {
-            isSent: true,
-            isDelivered: false,
-            isSeen: false
           }
         }
       ]

@@ -2,7 +2,7 @@ import { useTheme } from '@mui/material/styles'
 import ReactApexcharts from 'src/@core/components/react-apexcharts'
 import { formatCurrency } from 'src/@core/utils/format'
 
-const Chart = ({ days = 30 }: { days: number }) => {
+const Chart = ({ days = 30, showDollars = true }: { days: number; showDollars?: boolean }) => {
   const theme = useTheme()
 
   // Genera las fechas de los últimos 30 días
@@ -69,14 +69,16 @@ const Chart = ({ days = 30 }: { days: number }) => {
     tooltip: {
       custom: function ({ series, seriesIndex, dataPointIndex }) {
         return `<div class='bar-chart'>
-          <span>${formatCurrency(series[seriesIndex][dataPointIndex])}</span>
+          <span>${
+            showDollars ? formatCurrency(series[seriesIndex][dataPointIndex]) : series[seriesIndex][dataPointIndex]
+          }</span>
         </div>`
       }
     },
     yaxis: {
       labels: {
         formatter: function (value) {
-          return formatCurrency(value)
+          return showDollars ? formatCurrency(value) : value
         },
         style: { colors: theme.palette.text.disabled }
       }
@@ -102,8 +104,9 @@ const Chart = ({ days = 30 }: { days: number }) => {
   // Genera datos aleatorios para las ganancias diarias
   const generateRandomEarnings = (days: number) => {
     const earnings = []
+    const value = showDollars ? 4000 : 1000
     for (let i = 0; i < days; i++) {
-      earnings.push(Math.floor(Math.random() * (4000 - 1000 + 1) + 4000))
+      earnings.push(Math.floor(Math.random() * (value - value * 0.8 + 1) + value))
     }
 
     return earnings

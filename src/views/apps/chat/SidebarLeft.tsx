@@ -1,24 +1,24 @@
 // ** React Imports
-import { useState, useEffect, ChangeEvent, ReactNode } from 'react'
+import { ChangeEvent, ReactNode, useEffect, useState } from 'react'
 
 // ** Next Import
 import { useRouter } from 'next/router'
 
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import List from '@mui/material/List'
-import Chip from '@mui/material/Chip'
-import Badge from '@mui/material/Badge'
-import Drawer from '@mui/material/Drawer'
 import MuiAvatar from '@mui/material/Avatar'
-import ListItem from '@mui/material/ListItem'
-import TextField from '@mui/material/TextField'
+import Badge from '@mui/material/Badge'
+import Box from '@mui/material/Box'
+import Chip from '@mui/material/Chip'
+import Drawer from '@mui/material/Drawer'
 import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import ListItemText from '@mui/material/ListItemText'
+import InputAdornment from '@mui/material/InputAdornment'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
 import ListItemAvatar from '@mui/material/ListItemAvatar'
 import ListItemButton from '@mui/material/ListItemButton'
-import InputAdornment from '@mui/material/InputAdornment'
+import ListItemText from '@mui/material/ListItemText'
+import TextField from '@mui/material/TextField'
+import Typography from '@mui/material/Typography'
 
 // ** Third Party Components
 import PerfectScrollbar from 'react-perfect-scrollbar'
@@ -27,7 +27,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 import Icon from 'src/@core/components/icon'
 
 // ** Types
-import { ContactType, ChatSidebarLeftType, ChatsArrType } from 'src/types/apps/chatTypes'
+import { ChatSidebarLeftType, ChatsArrType, ContactType } from 'src/types/apps/chatTypes'
 
 // ** Custom Components Import
 import CustomAvatar from 'src/@core/components/mui/avatar'

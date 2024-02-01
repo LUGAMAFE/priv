@@ -2,22 +2,22 @@
 import { ChangeEvent, Fragment, ReactNode } from 'react'
 
 // ** MUI Imports
-import Box from '@mui/material/Box'
-import List from '@mui/material/List'
-import Badge from '@mui/material/Badge'
-import Radio from '@mui/material/Radio'
 import Avatar from '@mui/material/Avatar'
+import Badge from '@mui/material/Badge'
+import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import Switch from '@mui/material/Switch'
-import ListItem from '@mui/material/ListItem'
-import TextField from '@mui/material/TextField'
+import FormControlLabel from '@mui/material/FormControlLabel'
 import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import RadioGroup from '@mui/material/RadioGroup'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
-import ListItemButton from '@mui/material/ListItemButton'
-import FormControlLabel from '@mui/material/FormControlLabel'
+import Radio from '@mui/material/Radio'
+import RadioGroup from '@mui/material/RadioGroup'
+import Switch from '@mui/material/Switch'
+import TextField from '@mui/material/TextField'
+import Typography from '@mui/material/Typography'
 
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
@@ -172,7 +172,7 @@ const UserProfileLeft = (props: UserProfileLeftType) => {
                       <ListItemText primary='Notification' />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem disablePadding>
+                  {/* <ListItem disablePadding>
                     <ListItemButton sx={{ px: 2 }}>
                       <ListItemIcon sx={{ mr: 2, color: 'text.primary' }}>
                         <Icon icon='bx:user' />
@@ -187,7 +187,7 @@ const UserProfileLeft = (props: UserProfileLeftType) => {
                       </ListItemIcon>
                       <ListItemText primary='Delete Account' />
                     </ListItemButton>
-                  </ListItem>
+                  </ListItem> */}
                 </List>
                 <Button variant='contained'>Logout</Button>
               </Box>

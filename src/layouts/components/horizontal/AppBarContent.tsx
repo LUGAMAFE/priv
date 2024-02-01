@@ -26,84 +26,65 @@ interface Props {
 const notifications: NotificationsType[] = [
   {
     meta: 'Today',
-    avatarAlt: 'Flora',
-    title: 'Congratulation Flora! 🎉',
-    avatarImg: '/images/avatars/4.png',
-    subtitle: 'Won the monthly best seller badge'
-  },
-  {
-    meta: 'Yesterday',
-    avatarColor: 'primary',
-    subtitle: '5 hours ago',
-    avatarText: 'Robert Austin',
-    title: 'New user registered.'
+    title: 'Felicidades Valeria! 🎉',
+    subtitle: 'Wow eres la mejor creadora de contenido del mes. Sigue así.',
+    avatarText: 'Valeria Vidal',
+    avatarColor: 'primary'
   },
   {
     meta: '11 Aug',
     avatarAlt: 'message',
-    title: 'New message received 👋🏻',
-    avatarImg: '/images/avatars/5.png',
+    title: 'Nuevo mensaje recibido 👋🏻',
+    avatarImg: '/images/avatars/3.png',
     subtitle: 'You have 10 unread messages'
+  },
+  {
+    meta: 'Yesterday',
+    subtitle: '5 hours ago',
+    avatarImg: '/images/avatars/5.png',
+    avatarAlt: 'message',
+    title: 'Nuevo usuario registrado'
   },
   {
     meta: '25 May',
     title: 'Paypal',
     avatarAlt: 'paypal',
-    subtitle: 'Received Payment',
+    subtitle: 'Pago de $1000 recibido',
     avatarImg: '/images/misc/paypal.png'
   },
   {
     meta: '19 Mar',
     avatarAlt: 'order',
-    title: 'Received Order 📦',
+    title: 'Compra recibida',
     avatarImg: '/images/avatars/3.png',
-    subtitle: 'New order received from John'
-  },
-  {
-    meta: '27 Dec',
-    avatarAlt: 'chart',
-    subtitle: '25 hrs ago',
-    avatarImg: '/images/misc/chart.png',
-    title: 'Finance report has been generated'
+    subtitle: 'Nueva compra de John $200'
   }
 ]
 
 const shortcuts: ShortcutsType[] = [
   {
-    title: 'Calendar',
-    icon: 'bx:calendar',
-    url: '/apps/calendar',
-    subtitle: 'Appointments'
-  },
-  {
-    icon: 'bx:book',
-    title: 'Invoice App',
-    url: '/apps/invoice/list',
-    subtitle: 'Manage Accounts'
-  },
-  {
-    title: 'Users',
-    icon: 'bx:user',
-    url: '/apps/user/list',
-    subtitle: 'Manage Users'
-  },
-  {
-    url: '/apps/roles',
-    icon: 'bx:check-shield',
-    title: 'Role Management',
-    subtitle: 'Permissions'
-  },
-  {
-    url: '/',
-    title: 'Dashboard',
-    subtitle: 'User Dashboard',
+    url: '/dashboards/analytics',
+    title: 'Analytics',
+    subtitle: 'Account Stats',
     icon: 'bx:pie-chart-alt-2'
   },
   {
-    icon: 'bx:cog',
-    title: 'Settings',
-    subtitle: 'Account Settings',
-    url: '/pages/account-settings/account'
+    icon: 'mingcute:pig-money-line',
+    title: 'Earnings',
+    url: '/dashboards/earnings',
+    subtitle: 'Manage Earnings'
+  },
+  {
+    title: 'Fans',
+    icon: 'ph:users',
+    url: '/apps/user/list',
+    subtitle: 'Fans List'
+  },
+  {
+    title: 'Payout Requests',
+    icon: 'game-icons:pay-money',
+    url: '/dashboards/payout-requests',
+    subtitle: 'Check your payments'
   },
   {
     title: 'Help Center',
@@ -112,10 +93,10 @@ const shortcuts: ShortcutsType[] = [
     subtitle: 'FAQs & Articles'
   },
   {
-    title: 'Dialogs',
-    icon: 'bx:window-open',
-    subtitle: 'Useful Dialogs',
-    url: '/pages/dialog-examples'
+    icon: 'bx:cog',
+    title: 'Settings',
+    subtitle: 'Account Settings',
+    url: '/pages/account-settings/account'
   }
 ]
 

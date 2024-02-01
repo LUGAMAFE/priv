@@ -7,6 +7,7 @@ import { useTheme } from '@mui/material/styles'
 
 // ** Third Party Imports
 import { ApexOptions } from 'apexcharts'
+import { useTranslation } from 'react-i18next'
 
 // ** Custom Components Imports
 import ReactApexcharts from 'src/@core/components/react-apexcharts'
@@ -16,6 +17,7 @@ const series = [{ data: [185, 207, 226, 250, 320, 350, 400, 410, 452] }]
 const AnalyticsOrder = () => {
   // ** Hook
   const theme = useTheme()
+  const { t } = useTranslation()
 
   const options: ApexOptions = {
     chart: {
@@ -126,7 +128,7 @@ const AnalyticsOrder = () => {
   return (
     <Card sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
       <CardContent sx={{ p: theme => `${theme.spacing(3.5, 5, 0)} !important` }}>
-        <Typography sx={{ fontWeight: 600, color: 'text.secondary' }}>Suscriptores Totales</Typography>
+        <Typography sx={{ fontWeight: 600, color: 'text.secondary' }}>{t('dashboard.total-suscribers')}</Typography>
         <Typography variant='h5'>452</Typography>
       </CardContent>
       <Box height={'100%'}>

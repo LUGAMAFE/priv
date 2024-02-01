@@ -6,20 +6,17 @@ import Typography from '@mui/material/Typography'
 
 // ** Styled Component Import
 import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
-import Content from 'src/pages/dashboards/earnings/content'
+import Content from 'src/pages/dashboards/engagement/content'
 
-const AnalyticsDashboard = () => {
+const Engagement = () => {
   return (
     <ApexChartWrapper>
       <Grid container spacing={6} justifyContent={'center'}>
         <Grid item xs={12} md={12}>
           <Typography variant='h3' sx={{ fontWeight: 400, fontSize: '2.5rem !important' }}>
-            Ganancias
+            Compromiso
           </Typography>
         </Grid>
-        {/* <Grid item xs={12} md={12}>
-          <CardFinanceSummary />
-        </Grid> */}
         <Grid item xs={12} md={12}>
           <Content />
         </Grid>
@@ -28,4 +25,4 @@ const AnalyticsDashboard = () => {
   )
 }
 
-export default AnalyticsDashboard
+export default Engagement

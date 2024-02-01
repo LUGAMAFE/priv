@@ -1,27 +1,27 @@
 // ** React Imports
-import { useState, useEffect, ReactElement, SyntheticEvent } from 'react'
+import { ReactElement, SyntheticEvent, useEffect, useState } from 'react'
 
 // ** Next Import
 import { useRouter } from 'next/router'
 
 // ** MUI Components
-import Tab from '@mui/material/Tab'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import TabPanel from '@mui/lab/TabPanel'
 import TabContext from '@mui/lab/TabContext'
-import Typography from '@mui/material/Typography'
-import { styled, Theme } from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
 import MuiTabList, { TabListProps } from '@mui/lab/TabList'
+import TabPanel from '@mui/lab/TabPanel'
+import Box from '@mui/material/Box'
 import CircularProgress from '@mui/material/CircularProgress'
+import Grid from '@mui/material/Grid'
+import { styled, Theme } from '@mui/material/styles'
+import Tab from '@mui/material/Tab'
+import Typography from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 // ** Type Import
 import {
-  TeamsTabType,
+  ConnectionsTabType,
   ProfileTabType,
   ProjectsTabType,
-  ConnectionsTabType,
+  TeamsTabType,
   UserProfileActiveTab
 } from 'src/@fake-db/types'
 
@@ -29,10 +29,10 @@ import {
 import Icon from 'src/@core/components/icon'
 
 // ** Demo Components
-import Teams from 'src/views/pages/user-profile/teams'
+import Connections from 'src/views/pages/user-profile/connections'
 import Profile from 'src/views/pages/user-profile/profile'
 import Projects from 'src/views/pages/user-profile/projects'
-import Connections from 'src/views/pages/user-profile/connections'
+import Teams from 'src/views/pages/user-profile/teams'
 import UserProfileHeader from 'src/views/pages/user-profile/UserProfileHeader'
 
 const TabList = styled(MuiTabList)<TabListProps>(({ theme }) => ({

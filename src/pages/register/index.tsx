@@ -109,7 +109,9 @@ const Register = () => {
           <Typography variant='h6' sx={{ mb: 1.5 }}>
             Adventure starts here 🚀
           </Typography>
-          <Typography sx={{ mb: 6, color: 'text.secondary' }}>Make your app management easy and fun!</Typography>
+          <Typography sx={{ mb: 6, color: 'text.secondary' }}>
+            Manejar tu contenido y fans nunca había sido tan divertido!
+          </Typography>
           <form noValidate autoComplete='off' onSubmit={e => e.preventDefault()}>
             <TextField autoFocus fullWidth sx={{ mb: 4 }} label='Username' placeholder='johndoe' />
             <TextField fullWidth label='Email' sx={{ mb: 4 }} placeholder='user@email.com' />
@@ -166,14 +168,14 @@ const Register = () => {
               <IconButton href='/' component={Link} sx={{ color: '#1da1f2' }} onClick={e => e.preventDefault()}>
                 <Icon icon='bxl:twitter' />
               </IconButton>
-              <IconButton
+              {/* <IconButton
                 href='/'
                 component={Link}
                 onClick={e => e.preventDefault()}
                 sx={{ color: theme.palette.mode === 'light' ? '#272727' : 'grey.300' }}
               >
                 <Icon icon='bxl:github' />
-              </IconButton>
+              </IconButton> */}
               <IconButton href='/' component={Link} sx={{ color: '#db4437' }} onClick={e => e.preventDefault()}>
                 <Icon icon='bxl:google' />
               </IconButton>

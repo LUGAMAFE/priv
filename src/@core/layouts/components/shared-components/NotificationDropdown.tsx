@@ -1,16 +1,16 @@
 // ** React Imports
-import { useState, SyntheticEvent, Fragment, ReactNode } from 'react'
+import { Fragment, ReactNode, SyntheticEvent, useState } from 'react'
 
 // ** MUI Imports
-import Box from '@mui/material/Box'
 import Badge from '@mui/material/Badge'
+import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
-import { styled, Theme } from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
 import MuiMenu, { MenuProps } from '@mui/material/Menu'
 import MuiMenuItem, { MenuItemProps } from '@mui/material/MenuItem'
+import { styled, Theme } from '@mui/material/styles'
 import Typography, { TypographyProps } from '@mui/material/Typography'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
@@ -19,13 +19,13 @@ import Icon from 'src/@core/components/icon'
 import PerfectScrollbarComponent from 'react-perfect-scrollbar'
 
 // ** Type Imports
-import { ThemeColor } from 'src/@core/layouts/types'
-import { Settings } from 'src/@core/context/settingsContext'
 import { CustomAvatarProps } from 'src/@core/components/mui/avatar/types'
+import { Settings } from 'src/@core/context/settingsContext'
+import { ThemeColor } from 'src/@core/layouts/types'
 
 // ** Custom Components Imports
-import CustomChip from 'src/@core/components/mui/chip'
 import CustomAvatar from 'src/@core/components/mui/avatar'
+import CustomChip from 'src/@core/components/mui/chip'
 
 // ** Util Import
 import { getInitials } from 'src/@core/utils/get-initials'
@@ -193,7 +193,7 @@ const NotificationDropdown = (props: Props) => {
               skin='light'
               size='small'
               color='primary'
-              label={`${notifications.length} New`}
+              label={`${notifications.length} Nuevas`}
               sx={{ fontSize: '0.75rem', fontWeight: 500 }}
             />
           </Box>

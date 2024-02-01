@@ -3,13 +3,12 @@ import Link from 'next/link'
 
 // ** MUI Imports
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Card from '@mui/material/Card'
-import Switch from '@mui/material/Switch'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import CardHeader from '@mui/material/CardHeader'
+import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
+import CardHeader from '@mui/material/CardHeader'
+import Grid from '@mui/material/Grid'
+import Typography from '@mui/material/Typography'
 
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
@@ -78,23 +77,24 @@ const socialAccountsArr: SocialAccountsType[] = [
     isConnected: true,
     username: '@Loopcrack',
     logo: '/images/logos/instagram.png'
-  },
-  {
-    title: 'Dribbble',
-    isConnected: false,
-    logo: '/images/logos/dribbble.png'
-  },
-  {
-    title: 'Behance',
-    isConnected: false,
-    logo: '/images/logos/behance.png'
   }
+
+  // {
+  //   title: 'Dribbble',
+  //   isConnected: false,
+  //   logo: '/images/logos/dribbble.png'
+  // },
+  // {
+  //   title: 'Behance',
+  //   isConnected: false,
+  //   logo: '/images/logos/behance.png'
+  // }
 ]
 
 const TabConnections = () => {
   return (
     <Grid container spacing={6}>
-      {/* Connected Accounts Cards */}
+      {/* Connected Accounts Cards
       <Grid item xs={12} md={6}>
         <Card>
           <CardHeader title='Connected Accounts' />
@@ -132,7 +132,7 @@ const TabConnections = () => {
             })}
           </CardContent>
         </Card>
-      </Grid>
+      </Grid> */}
       {/* Social Accounts Cards */}
       <Grid item xs={12} md={6}>
         <Card>

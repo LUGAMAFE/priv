@@ -87,7 +87,9 @@ const RegisterV1 = () => {
             <Typography variant='h6' sx={{ mb: 1.5 }}>
               Adventure starts here 🚀
             </Typography>
-            <Typography sx={{ mb: 6, color: 'text.secondary' }}>Make your app management easy and fun!</Typography>
+            <Typography sx={{ mb: 6, color: 'text.secondary' }}>
+              Manejar tu contenido y fans nunca ha sido tan divertido!
+            </Typography>
             <form noValidate autoComplete='off' onSubmit={e => e.preventDefault()}>
               <TextField autoFocus fullWidth id='username' label='Username' sx={{ mb: 4 }} />
               <TextField fullWidth type='email' label='Email' sx={{ mb: 4 }} />

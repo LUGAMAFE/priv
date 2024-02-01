@@ -1,24 +1,24 @@
 // ** React Imports
-import { useState, useEffect, forwardRef } from 'react'
+import { forwardRef, useEffect, useState } from 'react'
 
 // ** Next Import
 import Link from 'next/link'
 
 // ** MUI Imports
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
-import Tooltip from '@mui/material/Tooltip'
-import { styled } from '@mui/material/styles'
-import MenuItem from '@mui/material/MenuItem'
-import TextField from '@mui/material/TextField'
+import CardContent from '@mui/material/CardContent'
 import CardHeader from '@mui/material/CardHeader'
+import FormControl from '@mui/material/FormControl'
+import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
 import InputLabel from '@mui/material/InputLabel'
-import Typography from '@mui/material/Typography'
-import FormControl from '@mui/material/FormControl'
-import CardContent from '@mui/material/CardContent'
+import MenuItem from '@mui/material/MenuItem'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
+import TextField from '@mui/material/TextField'
+import Tooltip from '@mui/material/Tooltip'
+import Typography from '@mui/material/Typography'
+import { styled } from '@mui/material/styles'
 import { DataGrid, GridColDef, GridRowId } from '@mui/x-data-grid'
 
 // ** Third Party Imports
@@ -30,11 +30,11 @@ import Icon from 'src/@core/components/icon'
 
 // ** Store & Actions Imports
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchData, deleteInvoice } from 'src/store/apps/invoice'
+import { deleteInvoice, fetchData } from 'src/store/apps/invoice'
 
 // ** Types Imports
-import { RootState, AppDispatch } from 'src/store'
 import { ThemeColor } from 'src/@core/layouts/types'
+import { AppDispatch, RootState } from 'src/store'
 import { InvoiceType } from 'src/types/apps/invoiceTypes'
 import { DateType } from 'src/types/forms/reactDatepickerTypes'
 
@@ -42,8 +42,8 @@ import { DateType } from 'src/types/forms/reactDatepickerTypes'
 import { getInitials } from 'src/@core/utils/get-initials'
 
 // ** Custom Components Imports
-import CustomChip from 'src/@core/components/mui/chip'
 import CustomAvatar from 'src/@core/components/mui/avatar'
+import CustomChip from 'src/@core/components/mui/chip'
 import OptionsMenu from 'src/@core/components/option-menu'
 import TableHeader from 'src/views/apps/invoice/list/TableHeader'
 
@@ -78,6 +78,7 @@ const LinkStyled = styled(Link)(({ theme }) => ({
 
 // ** Vars
 const invoiceStatusObj: InvoiceStatusObj = {
+  Pending: { color: 'warning', icon: 'bx:time-five' },
   Paid: { color: 'success', icon: 'bx:pie-chart-alt' },
   Sent: { color: 'secondary', icon: 'bx:paper-plane' },
   Downloaded: { color: 'info', icon: 'bx:down-arrow-circle' },

@@ -3,7 +3,7 @@ import mock from 'src/@fake-db/mock'
 
 // ** Types
 import { CardStatsType } from 'src/@fake-db/types'
-import { UsersType, ProjectListDataType } from 'src/types/apps/userTypes'
+import { ProjectListDataType, UsersType } from 'src/types/apps/userTypes'
 
 const data: { users: UsersType[] } = {
   users: [
@@ -843,36 +843,36 @@ const projectListData: ProjectListDataType[] = [
 
 const userCardStats: CardStatsType['statsHorizontal'] = [
   {
-    stats: '21,459',
-    trendNumber: 29,
-    title: 'Session',
-    subtitle: 'Total Users ',
+    stats: '15,762',
+    trendNumber: 35,
+    title: 'Total Fans',
+    subtitle: 'Overall fan count',
     avatarIcon: 'bx:user'
   },
   {
-    stats: '4,567',
-    trendNumber: 18,
-    title: 'Paid Users',
-    avatarColor: 'error',
-    subtitle: 'Last week analytics ',
+    stats: '9,500',
+    trendNumber: 30,
+    title: 'Profile Visitors',
+    avatarColor: 'primary',
+    subtitle: 'Users who viewed but didn’t subscribe',
+    avatarIcon: 'bx:user-check'
+  },
+  {
+    stats: '1,987',
+    trendNumber: 17,
+    trend: 'positive',
+    title: 'New Fans',
+    avatarColor: 'info',
+    subtitle: 'Gained last week',
     avatarIcon: 'bx:user-plus'
   },
   {
-    stats: '19,860',
-    trendNumber: 14,
-    trend: 'negative',
-    title: 'Active Users',
-    avatarColor: 'success',
-    subtitle: 'Last week analytics ',
-    avatarIcon: 'bx:group'
-  },
-  {
-    stats: '237',
-    trendNumber: 42,
-    avatarColor: 'warning',
-    title: 'Pending Users',
-    subtitle: 'Last year analytics ',
-    avatarIcon: 'bx:user-voice'
+    stats: '348',
+    trendNumber: 12,
+    avatarColor: 'error',
+    title: 'Unsubscribed Fans',
+    subtitle: 'Fans who unsubscribed last month',
+    avatarIcon: 'bx:user-x'
   }
 ]
 

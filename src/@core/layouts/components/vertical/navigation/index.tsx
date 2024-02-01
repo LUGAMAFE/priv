@@ -2,8 +2,8 @@
 import { useRef, useState } from 'react'
 
 // ** MUI Imports
-import List from '@mui/material/List'
 import Box, { BoxProps } from '@mui/material/Box'
+import List from '@mui/material/List'
 import { createTheme, responsiveFontSizes, styled, ThemeProvider } from '@mui/material/styles'
 
 // ** Third Party Components
@@ -17,8 +17,8 @@ import themeConfig from 'src/configs/themeConfig'
 
 // ** Component Imports
 import Drawer from './Drawer'
-import VerticalNavItems from './VerticalNavItems'
 import VerticalNavHeader from './VerticalNavHeader'
+import VerticalNavItems from './VerticalNavItems'
 
 // ** Theme Options
 import themeOptions from 'src/@core/theme/ThemeOptions'
