@@ -45,7 +45,8 @@ const AnalyticsTotalRevenue = () => {
   // const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
   // // ** Hooks & Var
-  // const theme = useTheme()
+  const theme = useTheme()
+
   // const { settings } = useSettings()
   // const { direction } = settings
 
