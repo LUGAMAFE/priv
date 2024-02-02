@@ -13,12 +13,12 @@ import Typography from '@mui/material/Typography'
 // ** Icon Imports
 import Icon from 'src/@core/components/icon'
 
-interface ConnectedAccountsType {
-  title: string
-  logo: string
-  checked: boolean
-  subtitle: string
-}
+// interface ConnectedAccountsType {
+//   title: string
+//   logo: string
+//   checked: boolean
+//   subtitle: string
+// }
 
 interface SocialAccountsType {
   title: string
@@ -27,38 +27,38 @@ interface SocialAccountsType {
   isConnected: boolean
 }
 
-const connectedAccountsArr: ConnectedAccountsType[] = [
-  {
-    checked: true,
-    title: 'Google',
-    logo: '/images/logos/google.png',
-    subtitle: 'Calendar and Contacts'
-  },
-  {
-    checked: false,
-    title: 'Slack',
-    logo: '/images/logos/slack.png',
-    subtitle: 'Communications'
-  },
-  {
-    checked: true,
-    title: 'Github',
-    logo: '/images/logos/github.png',
-    subtitle: 'Manage your Git repositories'
-  },
-  {
-    checked: true,
-    title: 'Mailchimp',
-    subtitle: 'Email marketing service',
-    logo: '/images/logos/mail-chimp.png'
-  },
-  {
-    title: 'Asana',
-    checked: false,
-    subtitle: 'Communication',
-    logo: '/images/logos/asana.png'
-  }
-]
+// const connectedAccountsArr: ConnectedAccountsType[] = [
+//   {
+//     checked: true,
+//     title: 'Google',
+//     logo: '/images/logos/google.png',
+//     subtitle: 'Calendar and Contacts'
+//   },
+//   {
+//     checked: false,
+//     title: 'Slack',
+//     logo: '/images/logos/slack.png',
+//     subtitle: 'Communications'
+//   },
+//   {
+//     checked: true,
+//     title: 'Github',
+//     logo: '/images/logos/github.png',
+//     subtitle: 'Manage your Git repositories'
+//   },
+//   {
+//     checked: true,
+//     title: 'Mailchimp',
+//     subtitle: 'Email marketing service',
+//     logo: '/images/logos/mail-chimp.png'
+//   },
+//   {
+//     title: 'Asana',
+//     checked: false,
+//     subtitle: 'Communication',
+//     logo: '/images/logos/asana.png'
+//   }
+// ]
 
 const socialAccountsArr: SocialAccountsType[] = [
   {

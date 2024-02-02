@@ -44,10 +44,10 @@ import LogoIcon from 'src/@core/components/logo-icon'
 import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Styled Components
-const LoginIllustration = styled('img')({
-  height: 'auto',
-  maxWidth: '100%'
-})
+// const LoginIllustration = styled('img')({
+//   height: 'auto',
+//   maxWidth: '100%'
+// })
 
 const RightWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   width: '100%',

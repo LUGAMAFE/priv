@@ -11,7 +11,7 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Typography from '@mui/material/Typography'
-import { styled, useTheme } from '@mui/material/styles'
+import { styled } from '@mui/material/styles'
 
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
@@ -42,8 +42,8 @@ const CalcWrapper = styled(Box)<BoxProps>(({ theme }) => ({
 }))
 
 const PreviewCard = ({ data }: Props) => {
-  // ** Hook
-  const theme = useTheme()
+  // // ** Hook
+  // const theme = useTheme()
 
   if (data) {
     return (

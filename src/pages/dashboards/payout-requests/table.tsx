@@ -38,7 +38,6 @@ import { AppDispatch, RootState } from 'src/store'
 import { DateType } from 'src/types/forms/reactDatepickerTypes'
 
 // ** Utils Import
-import { getInitials } from 'src/@core/utils/get-initials'
 
 // ** Custom Components Imports
 import CustomAvatar from 'src/@core/components/mui/avatar'
@@ -88,21 +87,21 @@ const invoiceStatusObj: InvoiceStatusObj = {
 }
 
 // ** renders client column
-const renderClient = (row: InvoiceType) => {
-  if (row.avatar.length) {
-    return <CustomAvatar src={row.avatar} sx={{ mr: 3, width: 30, height: 30 }} />
-  } else {
-    return (
-      <CustomAvatar
-        skin='light'
-        color={(row.avatarColor as ThemeColor) || ('primary' as ThemeColor)}
-        sx={{ mr: 3, width: 30, height: 30, fontSize: '.8rem', lineHeight: 1.5 }}
-      >
-        {getInitials(row.name || 'John Doe')}
-      </CustomAvatar>
-    )
-  }
-}
+// const renderClient = (row: InvoiceType) => {
+//   if (row.avatar.length) {
+//     return <CustomAvatar src={row.avatar} sx={{ mr: 3, width: 30, height: 30 }} />
+//   } else {
+//     return (
+//       <CustomAvatar
+//         skin='light'
+//         color={(row.avatarColor as ThemeColor) || ('primary' as ThemeColor)}
+//         sx={{ mr: 3, width: 30, height: 30, fontSize: '.8rem', lineHeight: 1.5 }}
+//       >
+//         {getInitials(row.name || 'John Doe')}
+//       </CustomAvatar>
+//     )
+//   }
+// }
 
 const defaultColumns: GridColDef[] = [
   {

@@ -28,12 +28,12 @@ const ProfilePicture = styled('img')(({ theme }) => ({
   }
 }))
 
-const ImgStyled = styled('img')(({ theme }) => ({
-  width: 100,
-  height: 100,
-  marginRight: theme.spacing(6.25),
-  borderRadius: theme.shape.borderRadius
-}))
+// const ImgStyled = styled('img')(({ theme }) => ({
+//   width: 100,
+//   height: 100,
+//   marginRight: theme.spacing(6.25),
+//   borderRadius: theme.shape.borderRadius
+// }))
 
 const ButtonStyled = styled(Button)<ButtonProps & { component?: ElementType; htmlFor?: string }>(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
@@ -80,7 +80,8 @@ const UserProfileHeader = () => {
     setInputValue('')
     setImgSrc('/images/valeria.webp')
   }
-  const designationIcon = data?.designationIcon || 'bx:briefcase'
+
+  // const designationIcon = data?.designationIcon || 'bx:briefcase'
 
   return data !== null ? (
     <Card>

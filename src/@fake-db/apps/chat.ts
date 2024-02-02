@@ -4,8 +4,8 @@ import mock from 'src/@fake-db/mock'
 // ** Types
 import { ChatsObj, ContactType, ProfileUserType } from 'src/types/apps/chatTypes'
 
-const previousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000)
-const dayBeforePreviousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000 * 2)
+// const previousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000)
+// const dayBeforePreviousDay = new Date(new Date().getTime() - 24 * 60 * 60 * 1000 * 2)
 
 const data: { chats: ChatsObj[]; contacts: ContactType[]; profileUser: ProfileUserType } = {
   profileUser: {

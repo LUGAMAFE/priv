@@ -1,5 +1,4 @@
 // ** React Imports
-import { MouseEvent, useState } from 'react'
 
 // ** MUI Import
 import Box from '@mui/material/Box'
@@ -7,7 +6,7 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Grid, { GridProps } from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import { styled, useTheme } from '@mui/material/styles'
+import { styled } from '@mui/material/styles'
 
 // ** Icons Imports
 
@@ -18,7 +17,6 @@ import { ApexOptions } from 'apexcharts'
 import ReactApexcharts from 'src/@core/components/react-apexcharts'
 
 // ** Hook Import
-import { useSettings } from 'src/@core/hooks/useSettings'
 
 // ** Util Import
 import { formatCurrency } from 'src/@core/utils/format'
@@ -28,7 +26,8 @@ import CardCustom from 'src/views/ui/cards/statistics/CardCustom'
 const currentYear = new Date().getFullYear()
 const monthNames = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic', 'Ene']
 const last7Months = monthNames.slice(-7)
-const yearOptions = [currentYear - 1, currentYear - 2, currentYear - 3]
+
+// const yearOptions = [currentYear - 1, currentYear - 2, currentYear - 3]
 
 const series = [{ name: `${currentYear}`, data: [18067, 7083, 15509, 29050, 18002, 12125, 9080, 10080] }]
 
@@ -42,21 +41,21 @@ const StyledGrid = styled(Grid)<GridProps>(({ theme }) => ({
 }))
 
 const AnalyticsTotalRevenue = () => {
-  // ** State
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  // // ** State
+  // const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
 
-  // ** Hooks & Var
-  const theme = useTheme()
-  const { settings } = useSettings()
-  const { direction } = settings
+  // // ** Hooks & Var
+  // const theme = useTheme()
+  // const { settings } = useSettings()
+  // const { direction } = settings
 
-  const handleClick = (event: MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
+  // const handleClick = (event: MouseEvent<HTMLElement>) => {
+  //   setAnchorEl(event.currentTarget)
+  // }
 
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
+  // const handleClose = () => {
+  //   setAnchorEl(null)
+  // }
 
   const barOptions: ApexOptions = {
     chart: {
